@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\A_TeachingMaterial\6.JspSpring\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\A_TeachingMaterial\6.JspSpring\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\dummyWeb" path="/dummyWeb" reloadable="true" source="org.eclipse.jst.jee.server:dummyWeb"/></Host>
+      <Context docBase="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\dummyWeb" path="/dummyWeb" reloadable="true" source="org.eclipse.jst.jee.server:dummyWeb"/><Context docBase="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\WebStudy01" path="/WebStudy01" reloadable="true" source="org.eclipse.jst.jee.server:WebStudy01"/></Host>
     </Engine>
   </Service>
 </Server>

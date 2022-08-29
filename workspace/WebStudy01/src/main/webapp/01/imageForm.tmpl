@@ -1,0 +1,33 @@
+<html>
+    <head>
+    	<style type="text/css">
+    		select{
+    			background-color : aqua;
+    		}
+    	</style>
+    	
+    	<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    	
+    	<script type="text/javascript">
+    	
+    		$(function(){
+    			$('select').on('change', function(){
+    				var img = $(this).val()
+    				$('#image').attr('src', '/WebStudy01/image?name=' + img)
+    			})
+    		});
+    	
+    	</script>
+    	
+    </head>                      
+	<body>                      
+         <h4> 이미지 파일 선택 </h4>    
+      	   <form action = '#cPath#/image'>
+     	   		<select name = 'name'>
+     	   			#options#	                    
+      			</select>
+      			<input type='submit' value='전송' />
+      		</form>                      
+      		<img id = "image" alt="" src="">
+    </body>                       
+</html>                           
