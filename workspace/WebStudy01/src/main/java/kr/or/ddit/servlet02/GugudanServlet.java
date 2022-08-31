@@ -89,6 +89,8 @@ public class GugudanServlet extends HttpServlet {
 			req.setAttribute("maxDan", max);
 
 			String viewLayer = "/WEB-INF/views/tmpl/gugudan.tmpl";
+			
+			
 			req.getRequestDispatcher(viewLayer).forward(req, resp);
 		}
 

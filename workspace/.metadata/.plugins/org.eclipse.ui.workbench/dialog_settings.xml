@@ -26,4 +26,28 @@
 		<item key="EditorSelectionDialog.STORE_ID_INTERNAL_EXTERNAL" value="false"/>
 		<item key="EditorSelectionDialog.STORE_ID_DESCR" value="org.eclipse.wst.html.core.htmlsource.source"/>
 	</section>
+	<section name="ImportExportAction">
+		<item key="ImportExportPage.STORE_SELECTED_EXPORT_WIZARD_ID" value="org.eclipse.ui.wizards.export.ZipFile"/>
+		<list key="ImportExportPage.STORE_EXPANDED_EXPORT_CATEGORIES">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
+	<section name="ZipFileExportWizard">
+		<item key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID" value="true"/>
+		<item key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID" value="true"/>
+		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\PC-04\Desktop\웹.zip"/>
+		</list>
+	</section>
+	<section name="FileSystemExportWizard">
+	</section>
+	<section name="PreferencesExportWizard">
+		<item key="" value="C:\Users\PC-04\Desktop\jsp.epf"/>
+		<item key="WizardPreferencesExportPage1.STORE_OVERWRITE_EXISTING_FILES_ID" value="false"/>
+		<item key="WizardPreferencesExportPage1.EXPORT_ALL_PREFERENCES_ID" value="true"/>
+		<list key="WizardPreferencesExportPage1.STORE_DESTINATION_NAMES_ID">
+			<item value="C:\Users\PC-04\Desktop\jsp.epf"/>
+		</list>
+	</section>
 </section>

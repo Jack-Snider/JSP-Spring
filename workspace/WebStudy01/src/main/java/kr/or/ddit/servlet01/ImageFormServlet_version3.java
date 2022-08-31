@@ -5,31 +5,10 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 
-/*
- 	서블릿에는 init, service, destroy 세개의 함수가 정의 되어있다.
- 	
- 	Tips.
- 	
- 	생명주기 메소드들은 다음과 같다.
- 	
- 	init() -> 서블릿 초기화를 담당하고 초기에 한 번만 실행된다.
- 	
- 	service()
- 	doGet()
- 	doPost()
- 	그 외 doXXX..() 함수들
- 	
- 	-> 요청/응답을 담당하며 스레드를 통해 동시에 실행된다.
- 	
- 	destroy() ->	서블릿 종료를 담당하고 종료할 때 한 번만 실행 된다.
- 					1. 컨테이너로부터 서블릿 종료 요청이 있을 때 destroy() 메소드를 호출한다.
- 					2. 서블릿이 종료되면서 정리해야 할 작업이 있을 때는 destroy()메소드를 오버라이딩해서 구현하면 된다.
- */
-
 
 @SuppressWarnings("serial") // ?..
-//@WebServlet(value = "/imageForm", loadOnStartup = 1) // ?..
-public class ImageFormServlet_version2 extends HttpServlet{
+@WebServlet(value = "/imageForm", loadOnStartup = 1) // ?..
+public class ImageFormServlet_version3 extends HttpServlet{
    
    /*
 	
@@ -85,7 +64,7 @@ public class ImageFormServlet_version2 extends HttpServlet{
        */
       req.setAttribute( "cPath" ,  req.getContextPath() );
       req.setAttribute( "options" ,  options );
-      req.getRequestDispatcher( "/01/imageForm2.tmpl" ).forward( req, resp );
+      req.getRequestDispatcher( "/02/ImageForm.jsp" ).forward( req, resp );
       /*
        
        1. forward 
