@@ -3,7 +3,7 @@ fontPropagated=true
 org.eclipse.wst.jsdt.ui.editor.tab.width=
 org.eclipse.wst.jsdt.ui.formatterprofiles.version=11
 org.eclipse.wst.jsdt.ui.javadoclocations.migrated=true
-org.eclipse.wst.jsdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.wst.jsdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="javaScript" deleted\="false" description\="" enabled\="true" name\="ajaxCode">$$.ajax({&\#13;\r\n\t&\#13;\r\n\t\t\t\t\t,\turl \: "${cursor}"&\#13;\r\n\t\t\t\t\t, \tdate \: ""&\#13;\r\n\t\t\t\t\t,\tdataType \: "html"&\#13;\r\n\t\t\t\t\t, \tsuccess \: function( res ){&\#13;\r\n\t\t\t\t\t&\#13;\r\n\t\t\t\t\t\t}, \t&\#13;\r\n\t\t\t\t\t\terror \: function( errorResp ){&\#13;\r\n\t\t\t\t\t\tconsole.log( errorResp.status );&\#13;\r\n\t\t\t\t\t\t}&\#13;\r\n\t\t\t\t&\#13;\r\n\t\t\t\t&\#13;\r\n\t\t\t\t\t});</template></templates>
 org.eclipse.wst.jsdt.ui.text.templates_migrated=true
 proposalOrderMigrated=true
 tabWidthPropagated=true

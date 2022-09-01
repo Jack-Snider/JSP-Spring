@@ -28,7 +28,7 @@ import javax.servlet.annotation.*;
 
 
 @SuppressWarnings("serial") // ?..
-@WebServlet(value = "/imageForm", loadOnStartup = 1) // ?..
+//@WebServlet(value = "/imageForm", loadOnStartup = 1) // ?..
 public class ImageFormServlet_version2 extends HttpServlet{
    
    /*
@@ -85,7 +85,7 @@ public class ImageFormServlet_version2 extends HttpServlet{
        */
       req.setAttribute( "cPath" ,  req.getContextPath() );
       req.setAttribute( "options" ,  options );
-      req.getRequestDispatcher( "/01/imageForm.tmpl" ).forward( req, resp );
+      req.getRequestDispatcher( "/01/imageForm2.tmpl" ).forward( req, resp );
       /*
        
        1. forward 

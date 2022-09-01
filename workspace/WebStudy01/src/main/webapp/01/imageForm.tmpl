@@ -10,12 +10,29 @@
     	
     	<script type="text/javascript">
     	
-    		$(function(){
+    		/* $( function(){
     			$('select').on('change', function(){
     				var img = $(this).val()
     				$('#image').attr('src', '/WebStudy01/image?name=' + img)
     			})
-    		});
+    		}); */
+    		
+    		const PATTERN = "#cPath#/image?name=%v";
+    		$( document ).ready( function(){
+    			$( "form" ).on( "submit", function( event ){ // event : form의 submit
+    				
+    				event.preventDefault(); // 기본적인 기능을 막는 용도 ( submit을 눌렀을때 제출이 되는걸 방지하기 위해 ) 
+    			
+    				//<img src = "#cPath#/image?name=cat1.jpg" />
+    				// 태그 새로 만들기
+    				let name = $( this ).find( "[name='name']" ).val()
+    				let newImg = $("<img>").attr( "src", PATTERN.replace("%v", name) )
+    				
+    				$( "imageArea" ).html( mewImg );
+    				
+    				return false;
+    			} );
+    		} );
     	
     	</script>
     	
@@ -28,6 +45,8 @@
       			</select>
       			<input type='submit' value='전송' />
       		</form>                      
-      		<img id = "image" alt="" src="">
+      		<div id = "imageArea">
+	      		
+      		</div>
     </body>                       
 </html>                           

@@ -1,6 +1,7 @@
 package kr.or.ddit.servlet01;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -15,7 +16,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/01/imageForm.tmpl")
+@WebServlet("*.tmpl")
 public class TMPLServlet extends HttpServlet {
 
 	/*
@@ -30,11 +31,18 @@ public class TMPLServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		StringBuffer tmplSource = readTemplate(req); //?
+		try {
+			StringBuffer tmplSource = readTemplate(req); //?
 
-		String html = evaluateVariable(req, tmplSource);
+			String html = evaluateVariable(req, tmplSource);
 
-		sendResponse(resp, html);
+			sendResponse(resp, html);
+			
+		} catch (FileNotFoundException e) {
+			resp.sendError( HttpServletResponse.SC_NOT_FOUND, e.getMessage() );
+		}
+		
+		
 	}
 	// 정규식 문법 : https://hbase.tistory.com/160
 	private final String REGEX = "#(\\w+)#"; // ?...
@@ -55,7 +63,7 @@ public class TMPLServlet extends HttpServlet {
 		 */
 		
 		// compile() -> 주어진 정규식을 갖는 패턴을 생성
-		Pattern pattern = Pattern.compile(REGEX);
+		Pattern pattern = Pattern.compile( REGEX );
 		
 
 		StringBuffer htmlSource = new StringBuffer();
@@ -95,6 +103,9 @@ public class TMPLServlet extends HttpServlet {
 		String servletPath = req.getServletPath();
 
 		InputStream is = getServletContext().getResourceAsStream(servletPath);
+		if( is == null ) {
+			throw new FileNotFoundException( String.format( "%s 해당 파일이 없음" , servletPath ) );
+		}
 		InputStreamReader isr = new InputStreamReader(is);
 		BufferedReader reader = new BufferedReader(isr);
 
