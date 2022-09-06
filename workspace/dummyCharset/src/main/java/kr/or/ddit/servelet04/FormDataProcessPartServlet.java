@@ -42,7 +42,7 @@ public class FormDataProcessPartServlet extends HttpServlet {
 		
 		Part filePart = req.getPart( "filePart" );
 		File saveFolder = new File( "D:\\contents" );
-		String fileName = filePart.getSubmittedFileName();
+		//String fileName = filePart.getSubmittedFileName();
 		File saveFile = new File( saveFolder, "" );
 		
 		
@@ -62,10 +62,6 @@ public class FormDataProcessPartServlet extends HttpServlet {
 		}
 		
 		
-		
-		
-		
-
 	}
 
 }

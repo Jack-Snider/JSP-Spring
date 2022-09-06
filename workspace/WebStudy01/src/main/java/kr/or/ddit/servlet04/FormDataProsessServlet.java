@@ -56,6 +56,7 @@ public class FormDataProsessServlet extends HttpServlet{
 //		 vo.setParamIpt2( req.getParameter( "paramIpt2" ) );
 		 
 		 
+		 // Reflection
 		 try {
 			BeanUtils.populate( vo, parameterMap );
 			

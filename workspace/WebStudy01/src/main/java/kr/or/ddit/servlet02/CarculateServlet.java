@@ -1,6 +1,7 @@
 package kr.or.ddit.servlet02;
 
 import java.io.IOException;
+import java.io.InputStream;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,9 +9,28 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import kr.or.ddit.vo.CalculateVO;
+
 @WebServlet( "/calculate" )
 public class CarculateServlet extends HttpServlet{
 
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		InputStream is = req.getInputStream();
+		
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.readValue( is , CalculateVO.class  );
+		
+		CalculateVO out  mapper.read( is, CalculateVO.Clsss );
+		PrintWiter out = resp.
+		
+						
+		
+	}
+	
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			
