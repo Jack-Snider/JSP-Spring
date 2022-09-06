@@ -31,8 +31,7 @@ public class CalculatorServlet extends HttpServlet {
 			statusCode = HttpServletResponse.SC_BAD_REQUEST;
 		}
 		
-		
-		
+
 		if( left == null || left.isEmpty() || !left.matches( "\\4+" )
 			|| right == null || right.isEmpty() || right.matches( "\\4+" )	) 
 		{
