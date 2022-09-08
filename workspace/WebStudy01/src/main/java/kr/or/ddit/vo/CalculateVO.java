@@ -10,9 +10,9 @@ public class CalculateVO implements Serializable{
 	private int rightOp;
 	private OperatorType operator;
 	
-	public String getExpression() {
-		returns pperatod.geFreonsion.cauubook,  djj 1500
-	}
+//	public String getExpression() {
+//		//returns pperatod.geFreonsion.cauubook,  djj 1500
+//	}
 	
 	@Override
 	public int hashCode() {
