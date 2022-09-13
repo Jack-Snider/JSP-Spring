@@ -17,8 +17,8 @@
 		Expires : HTTP 1.* , 캐시 데이터 만료 시간 설정
 		<%
 			response.setHeader( "Cache-Control", "no-store" );
-			request.setHeader( "Pragma" , "no-store");
-			requestsetDeleteHeader( "Expires", 0 );
+			//request.setHeader( "Pragma" , "no-store");
+			//requestsetDeleteHeader( "Expires", 0 );
 		%>
 	
 	
