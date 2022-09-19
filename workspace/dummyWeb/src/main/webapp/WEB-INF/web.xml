@@ -20,4 +20,15 @@
   	<url-pattern>/hello</url-pattern>
   </servlet-mapping>
   
+  
+  	<error-page>
+  		<error-code>500</error-code>
+  		<location>/errors/error500.jsp</location>
+  	</error-page>
+  
+  	<!-- 어플리케이션 전체 영역에 세션시간을 2분으로 설정 -->
+  	<session-config>
+  		<session-timeout>2</session-timeout>
+  	</session-config>
+  
 </web-app>
