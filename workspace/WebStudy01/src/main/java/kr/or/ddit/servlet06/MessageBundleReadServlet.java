@@ -21,43 +21,53 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
  */
 @WebServlet("/getMessage")
 public class MessageBundleReadServlet extends HttpServlet {
-   private static final long serialVersionUID = 1L;
-       
+	private static final long serialVersionUID = 1L;
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		1) 메시지 번들 로딩(ResourceBundle)
+//		2) "hello"코드 메시지 확보
+//		3) 확보한 메시지를 컨텐츠화(Accept 헤더에 따라 Content-Type 결정).
+		Locale locale = request.getLocale();
+		request.setCharacterEncoding("UTF-8");
+		String languageTag = request.getParameter("language");
+		if(languageTag!=null && !languageTag.isEmpty()) {
+			locale = Locale.forLanguageTag(languageTag);
+		}
+		
+		String baseName = "egovframework/message/com/message-common";
+		ResourceBundle bundle = ResourceBundle.getBundle(baseName, locale);
+		String value = bundle.getString("hello");
+	
+//		Map<String, Object> model = Collections.singletonMap("hello", value);
+		String accept = request.getHeader("Accept");
+//		String contentType = null;
+		
+		request.setAttribute("hello", value);
+		
+		String viewName = null;
+		
+		if(accept.contains("json")) {
+			viewName = "/jsonView.do";
+		}else if(accept.contains("xml")) {
+			viewName = "/xmlView.do";
+		}else {
+			viewName = "/WEB-INF/views/messageView.jsp";
+		}
+		
+		request.getRequestDispatcher(viewName).forward(request, response);	
+	}
 
-
-   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//    1) 메시지 번들 로딩(ResourceBundle)
-//    2) "hello"코드 메시지 확보
-//    3) 확보한 메시지를 컨텐츠화(Accept 헤더에 따라 Content-Type 결정).
-      
-	  Locale locale = request.getLocale();
-	  request.setCharacterEncoding( "UTF-8" );
-	  String languageTag = request.getParameter( "language" );
-	  if( languageTag != null && !languageTag.isEmpty() ) {
-		  locale = Locale.forLanguageTag( languageTag );
-	  }
-	  
-      String baseName = "egovframework/message/com/message-common";
-      ResourceBundle bundle = ResourceBundle.getBundle( baseName , locale );
-      String value = bundle.getString("hello");
-      
-      //Map<String, Object> model = Collections.singletonMap("hello", value);
-      String accept = request.getHeader("Accept");
-      //String contentType = null;
-      
-      request.setAttribute( "hello" , value );
-      String viewName = null;
-      
-      if(accept.contains("json")) {         
-    	  viewName = "/jsonView.do";   
-      }else if(accept.contains("xml")) {
-    	  viewName = "/xmlView.do";
-      }else {
-         //contentType = "text/html;charset=UTF-8";         
-         viewName = "/WEB-INF/views/messageView.jsp";
-      }
-      
-      request.getRequestDispatcher( viewName ).forward( request, response );
-   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

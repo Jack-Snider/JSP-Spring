@@ -5,15 +5,32 @@ import java.io.Serializable;
 import kr.or.ddit.enumpkg.OperatorType;
 
 public class CalculateVO implements Serializable{
-	
 	private int leftOp;
 	private int rightOp;
 	private OperatorType operator;
 	
-//	public String getExpression() {
-//		//returns pperatod.geFreonsion.cauubook,  djj 1500
-//	}
+	public String getExpression() {
+		return operator.getExpression(leftOp, rightOp);
+	}
 	
+	public int getLeftOp() {
+		return leftOp;
+	}
+	public void setLeftOp(int leftOp) {
+		this.leftOp = leftOp;
+	}
+	public int getRightOp() {
+		return rightOp;
+	}
+	public void setRightOp(int rightOp) {
+		this.rightOp = rightOp;
+	}
+	public OperatorType getOperator() {
+		return operator;
+	}
+	public void setOperator(OperatorType operator) {
+		this.operator = operator;
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -40,27 +57,10 @@ public class CalculateVO implements Serializable{
 			return false;
 		return true;
 	}
-	public int getLeftOp() {
-		return leftOp;
+	@Override
+	public String toString() {
+		return "CalculateVO [leftOp=" + leftOp + ", rightOp=" + rightOp + ", operator=" + operator + "]";
 	}
-	public void setLeftOp(int leftOp) {
-		this.leftOp = leftOp;
-	}
-	public int getRightOp() {
-		return rightOp;
-	}
-	public void setRightOp(int rightOp) {
-		this.rightOp = rightOp;
-	}
-	public OperatorType getOperator() {
-		return operator;
-	}
-	public void setOperator(OperatorType operator) {
-		this.operator = operator;
-	}
-	
-	
-	
 	
 	
 }

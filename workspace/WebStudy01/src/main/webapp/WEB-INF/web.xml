@@ -1,37 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-	version="3.1">
-
-	<display-name>WebStudy01</display-name>
-	<welcome-file-list>
-		<welcome-file>index.jsp</welcome-file>
-	</welcome-file-list>
-
-	<context-param>
-		<param-name>imageFolderPath</param-name>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>WebStudy01</display-name>
+  <welcome-file-list>
+    <welcome-file>index.do</welcome-file>
+  </welcome-file-list>
+  <context-param>
+  		<param-name>imageFolderPath</param-name>
 		<param-value>D:/contents/images</param-value>
-	</context-param>
-
-	<!-- 어노태이션 -->
-	<servlet> <!-- 서블릿 태그 : 위에 어노태이션이 지금 다음과 같은 코드를 대신 해주는 역할 ( 서블릿 등록 ) -->
-		<servlet-name>DescriptionServlet</servlet-name>
-		<servlet-class>kr.or.ddit.servlet01.DescriptionServlet</servlet-class>
-		<init-param>
-			<param-name>param1</param-name>
-			<param-value>value1</param-value>
-		</init-param>
-		<load-on-startup>1</load-on-startup> <!-- Servlet 싱글톤 객체의 최초의 요청 전으로 땡겨올 수 있다. -->
-	</servlet>
-
-	<!-- 위의 서블릿에 대한 주소 매핑 -->
-	<servlet-mapping>
-		<servlet-name>DescriptionServlet</servlet-name>
-		<url-pattern>/desc</url-pattern>
-	</servlet-mapping>
-
-
-
-
+  </context-param>
+  
+  <servlet>
+  	<servlet-name>DescriptionServlet</servlet-name>
+  	<servlet-class>kr.or.ddit.servlet01.DescriptionServlet</servlet-class>
+  	<init-param>
+  		<param-name>param1</param-name>
+  		<param-value>value1</param-value>
+  	</init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>DescriptionServlet</servlet-name>
+	<url-pattern>/desc</url-pattern>  	
+  </servlet-mapping>
+  
+  	<error-page>
+  		<error-code>500</error-code>
+  		<location>/errors/error500.jsp</location>
+  	</error-page>
+  
+ 	<session-config>
+ 		<session-timeout>2</session-timeout>
+ 	</session-config>
 </web-app>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

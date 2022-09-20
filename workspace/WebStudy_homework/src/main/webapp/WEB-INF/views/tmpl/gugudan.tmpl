@@ -1,0 +1,62 @@
+<html>
+<head>
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+	integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+	crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<h4>구구단 ( 8 * 9 )</h4>
+	2단 부터 9단까지 구구단 랜더링. 출력되는 구구단 text 형식 : "2 * 2 = 4"
+	<form name="gugudanForm">
+		최소단위 : <input id="minDan" type="number" name="minDan" min="2" max="9"
+			required value="#minDan#"> 최대단 : <select name="maxDan"
+			required>
+			<option value>#maxDan#</option> #options#
+		</select> <input type="submit" value="전송">
+	</form>
+
+	</div>
+	<table>#gugudan#
+	</table>
+
+	<script type="text/javascript">
+		
+			//document.gugudanForm.maxDan.value = "#maxDan#";
+			$( "[name = 'maxDan']" ).val( "#maxDan#" );
+			$( "form:first" ).on( "submit", function( event )
+					//event.preventDefualt()
+					//console.log( this );
+					//console.log( event.target );
+					//console.log( $(this) ).attr( "name" );
+					
+					
+					let url = this.action;
+					let method = this.method;
+					let data = $( this ).serialize(); // query string 생성
+					
+					// 기본적인 ajax 고정형태 ( 이 형태에서 많이 안 바뀜 )
+ 					$.ajax({
+	
+						url : url,
+					 	date : data,
+						dataType : "html",
+						success : function( res ){
+					
+						}, 	
+						error : function( errorResp ){
+						console.log( errorResp.status );
+						},
+				
+				
+					}); 
+					
+					return false;
+					
+					) );
+		
+		</script>
+
+</body>
+</html>
