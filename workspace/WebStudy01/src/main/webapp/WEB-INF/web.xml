@@ -22,11 +22,13 @@
   	<servlet-name>DescriptionServlet</servlet-name>
 	<url-pattern>/desc</url-pattern>  	
   </servlet-mapping>
-  
+  <!-- 
   	<error-page>
   		<error-code>500</error-code>
+  		
   		<location>/errors/error500.jsp</location>
   	</error-page>
+   -->
   
  	<session-config>
  		<session-timeout>2</session-timeout>

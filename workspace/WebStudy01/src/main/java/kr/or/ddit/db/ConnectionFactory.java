@@ -7,6 +7,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+import javax.sql.DataSource;
+
+import org.apache.commons.dbcp2.BasicDataSource;
+
 /**
  *  Design Pattern
  *  1. 생성 패턴 : Singleton pattern, Factory Method pattern, Builder Pattern
@@ -17,6 +21,9 @@ public class ConnectionFactory {
 	private static String oracleURL;
 	private static String oracleUser;
 	private static String oraclePassword;
+	
+	private static DataSource dataSource;
+	
 	static {
 		Properties dbInfo = new Properties();
 		try(
@@ -27,14 +34,27 @@ public class ConnectionFactory {
 			oracleURL = dbInfo.getProperty("url");
 			oracleUser = dbInfo.getProperty("user");
 			oraclePassword = dbInfo.getProperty("password");
-			Class.forName(dbInfo.getProperty("driverClassName"));
-		} catch (ClassNotFoundException | IOException e) {
+//			Class.forName(dbInfo.getProperty("driverClassName"));
+			BasicDataSource bds = new BasicDataSource();
+			bds.setDriverClassName(dbInfo.getProperty("driverClassName"));
+			bds.setUrl(oracleURL);
+			bds.setUsername(oracleUser);
+			bds.setPassword(oraclePassword);
+			
+			bds.setInitialSize(Integer.parseInt(dbInfo.getProperty("initialSize")));
+			bds.setMaxWaitMillis(Long.parseLong(dbInfo.getProperty("maxWait")));
+			bds.setMaxTotal(Integer.parseInt(dbInfo.getProperty("maxTotal")));
+			bds.setMaxIdle(Integer.parseInt(dbInfo.getProperty("maxIdle")));
+			
+			dataSource = bds;
+		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
 	}
 	
  	public static Connection getConnection() throws SQLException{
-		return DriverManager.getConnection(oracleURL, oracleUser, oraclePassword);
+//		return DriverManager.getConnection(oracleURL, oracleUser, oraclePassword);
+ 		return dataSource.getConnection();
 	}
 }
 
