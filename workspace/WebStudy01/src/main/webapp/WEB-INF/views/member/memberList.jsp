@@ -44,6 +44,9 @@
 <form id='viewForm' action="<%=request.getContextPath() %>/member/memberView.do">
 	<input type='hidden' name='who'  />
 </form>
+<form id = "deleteForm" action = "<%=request.getContextPath() %>/member/memberDelete.do">
+	<input type = "hidden" name = 'who'>
+</form>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -57,12 +60,12 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-danger" id = "deleteBtn">DELETE</button>
       </div>
     </div>
   </div>
 </div>
-<script type="text/javascript" src='<%=request.getContextPath() %>/resources/js/member/memberList.js'></script>
+<script type="text/javascript" src='<%=request.getContextPath() %>/resources/js/member/memberList.js?<%= System.currentTimeMillis()%>'></script>
 
 
 

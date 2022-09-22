@@ -37,7 +37,7 @@ public class MemberVO implements Serializable{
 	private String memMemorial;
 	private String memMemorialday;
 	private Integer memMileage;
-	private String memDelete;
+	private boolean memDelete;
 	
 	public String getMemId() {
 		return memId;
@@ -147,10 +147,10 @@ public class MemberVO implements Serializable{
 	public void setMemMileage(Integer memMileage) {
 		this.memMileage = memMileage;
 	}
-	public String getMemDelete() {
+	public boolean getMemDelete() {
 		return memDelete;
 	}
-	public void setMemDelete(String memDelete) {
+	public void setMemDelete(boolean memDelete) {
 		this.memDelete = memDelete;
 	}
 	@Override
