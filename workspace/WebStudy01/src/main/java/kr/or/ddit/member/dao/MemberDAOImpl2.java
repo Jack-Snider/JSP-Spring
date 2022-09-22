@@ -16,7 +16,7 @@ import java.util.List;
 import kr.or.ddit.db.ConnectionFactory;
 import kr.or.ddit.vo.MemberVO;
 
-public class MemberDAOImpl implements MemberDAO {
+public class MemberDAOImpl2 implements MemberDAO {
 
 	@Override
 	public int insertMember(MemberVO member) {

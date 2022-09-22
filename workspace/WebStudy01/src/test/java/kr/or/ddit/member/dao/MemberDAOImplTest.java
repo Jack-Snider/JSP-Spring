@@ -13,7 +13,19 @@ public class MemberDAOImplTest {
 
 	@Test
 	public void testInsertMember() {
-		fail("Not yet implemented");
+		
+		MemberVO member = new MemberVO();
+		member.setMemId( "a002" );
+		member.setMemPass( "java" );
+		member.setMemName( "신규" );
+		member.setMemZip( "000" );
+		member.setMemAdd1( "대전" );
+		member.setMemAdd2( "오류" );
+		member.setMemMail( "aa@naver.com" );
+		int rowcnt = dao.insertMember( member );
+		assertEquals( 1 , rowcnt );
+		
+		
 	}
 
 	@Test

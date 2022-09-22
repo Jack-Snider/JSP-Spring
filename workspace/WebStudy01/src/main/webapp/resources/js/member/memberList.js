@@ -1,12 +1,24 @@
 /**
  * 
  */
+ 	let deleteForm = $("#deleteForm");
+ 	let deleteBtn = $("#deleteBtn").on("click", function(event){
+ 		let who = $(this).data("who");
+ 		if( !who ) return false;
+ 		if(confirm( "진짜 삭제할까?" )){
+	 		deleteForm.get(0).who.value = who;
+	 		deleteForm.submit(); 		
+ 		}
+ 		
+ 	});
 	let viewModal = $("#exampleModal").on("hidden.bs.modal", function(event){
 		$(this).find(".modal-body").empty();
 		viewForm.get(0).reset();
+		deleteBtn.data("who","");
 	}).on("show.bs.modal", function(event){
 		let dataTr = event.relatedTarget;
 		let who = $(dataTr).data('who');
+		deleteBtn.data( "who",who );
 		viewForm.find('[name=who]').val(who);
 		viewForm.submit();
 	});
