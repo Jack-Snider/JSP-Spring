@@ -5,7 +5,59 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-09-22T09:58:00Z</updated>
+  <updated>2022-09-22T22:30:55Z</updated>
+  <entry>
+    <title>Spring Boot 3.0.0-M5 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/09/22/spring-boot-3-0-0-m5-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Scott Frederick</name>
+    </author>
+    <id>tag:spring.io,2022-09-22:4926</id>
+    <updated>2022-09-22T22:30:55Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;3.0.0-M5&lt;/code&gt; has been released and is now available from &lt;a href="https://repo.spring.io/milestone"&gt;https://repo.spring.io/milestone&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v3.0.0-M5"&gt;153 enhancements, documentation improvements, dependency upgrades, and bug fixes&lt;/a&gt;. Notable new features include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improved Ahead-of-Time (AOT) processing and native image support&lt;/li&gt;
+  &lt;li&gt;Improved actuator endpoints sanitization&lt;/li&gt;
+  &lt;li&gt;Jersey support re-instated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Please see the &lt;a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-3.0.0-M5-Release-Notes"&gt;release notes&lt;/a&gt; for more details and upgrade instructions.&lt;/p&gt;
+&lt;p&gt;Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/3.0.0-M5/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>A Bootiful Podcast: Couchbase and Cloud legend Laurent Doguin</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/09/22/a-bootiful-podcast-couchbase-and-cloud-legend-laurent-doguin" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-09-22:4927</id>
+    <updated>2022-09-22T18:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to his friend, fellow Java Champion, and director of developer relations and strategy at Couchbase, &lt;a href="https://twitter.com/ldoguin"&gt;Laurent Doguin (@ldoguin)&lt;/a&gt;&lt;/p&gt;
+&lt;iframe title="Couchbase and Cloud legend Laurent Doguin " allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=tzuv5-12cdc22-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;strong&gt;SpringOne 2022&lt;/strong&gt; is almost here! This is our first in-person event since the pandemic &lt;em&gt;and&lt;/em&gt; it&amp;rsquo;s when we release Spring Framework 6 and Spring Boot 3, the next generation of Spring and Spring Boot respectively. It&amp;rsquo;s running 6-8 December in my sunny San Francisco, CA! Register now at &lt;a href="https://springone.io"&gt;SpringOne.io&lt;/a&gt; and use the code &lt;code&gt;S1VM22_Advocate_200&lt;/code&gt; to get $200 off the current registration price.&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring Boot 2.7.4 available now</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/09/22/spring-boot-2-7-4-available-now" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Andy Wilkinson</name>
+    </author>
+    <id>tag:spring.io,2022-09-22:4924</id>
+    <updated>2022-09-22T12:06:26Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Boot &lt;code&gt;2.7.4&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
+&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects/spring-boot/releases/tag/v2.7.4"&gt;48 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;&lt;h3&gt;&lt;a href="#java-19" class="anchor" name="java-19"&gt;&lt;/a&gt;Java 19&lt;/h3&gt;
+&lt;p&gt;Following its GA release earlier this week, Java 19 is now supported.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in helping out, check out the &lt;a href="https://github.com/spring-projects/spring-boot/labels/status%3A%20ideal-for-contribution"&gt;&amp;ldquo;ideal for contribution&amp;rdquo; tag&lt;/a&gt; in the issue repository. If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-boot"&gt;&lt;code&gt;spring-boot&lt;/code&gt; tag&lt;/a&gt; or chat with the community on &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-boot/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-boot/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-boot/docs/2.7.4/reference/html"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-boot"&gt;Stack Overflow&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-boot"&gt;Gitter&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot 2.6.12 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2022/09/22/spring-boot-2-6-12-available-now" />
@@ -438,6 +490,7 @@ Artem&lt;/p&gt;
     <id>tag:spring.io,2022-09-20:4913</id>
     <updated>2022-09-20T07:00:00Z</updated>
     <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt; wherein I endeavor as best as I can to capture the latest-and-greatest in the wide, wacky, and wonderful world of Springdom! Naturally, I fail miserably basically every week. There&amp;rsquo;s no way I could hope to capture everything of note. But I persist&amp;hellip; &lt;/p&gt;
+&lt;p&gt;Are you coming to SpringOne 2022? This is our first in-person event since the pandemic &lt;em&gt;and&lt;/em&gt; it&amp;rsquo;s when we release Spring Framework 6 and Spring Boot 3, the next generation of Spring and Spring Boot respectively. It&amp;rsquo;s running 6-8 December here in my hometown of sunny San Francisco, CA! Register now at &lt;a href="https://springone.io"&gt;SpringOne.io&lt;/a&gt; and use the code &lt;code&gt;S1VM22_Advocate_200&lt;/code&gt; to get $200 off the current registration price.&lt;/p&gt;
 &lt;p&gt;So, without further ado, yet another wonderful week&amp;rsquo;s roundup! &lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;[A Bootiful Podcast: big data legend, former Pivot, and friend to the Spring community, Tim Spann](&lt;a href="https://spring.io/blog/2022/09/15/"&gt;https://spring.io/blog/2022/09/15/&lt;/a&gt;&lt;/li&gt;
@@ -692,60 +745,6 @@ implementation &amp;#39;org.springframework.cloud:spring-cloud-sleuth-otel-autoc
     <updated>2022-09-15T16:00:00Z</updated>
     <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to big data legend, former Pivot, and friend to the Spring community, &lt;a href="https://twitter.com/PaaSDev"&gt;Tim Spann (@PaaSDev)&lt;/a&gt;, about big data, StreamNative, and Apache Pulsar, and Spring for Apache Pulsar. Get your notebooks ready for this one, class! &lt;/p&gt;
 &lt;iframe title="Big data legend, former Pivot, and friend to the Spring community, Tim Spann " allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=fkubq-12c5465-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;logo_link=episode_page&amp;btn-skin=7"&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Framework 6.0.0-M6 and 5.3.23 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/09/15/spring-framework-6-0-0-m6-and-5-3-23-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Stéphane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2022-09-15:4905</id>
-    <updated>2022-09-15T09:05:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring Framework &lt;code&gt;6.0.0-M6&lt;/code&gt; and &lt;code&gt;5.3.23&lt;/code&gt; are available now.&lt;/p&gt;
-&lt;p&gt;Spring Framework &lt;code&gt;5.3.23&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v5.3.23"&gt;32 fixes and improvements&lt;/a&gt; and is a recommended upgrade for all Spring production scenarios.&lt;/p&gt;
-&lt;p&gt;Spring Framework &lt;code&gt;6.0.0-M6&lt;/code&gt; includes &lt;a href="https://github.com/spring-projects/spring-framework/releases/tag/v6.0.0-M6"&gt;123 additional fixes and improvements&lt;/a&gt; specific to the 6.0 branch. This milestone wraps up most of our AOT efforts, in preparation for our release candidate phase. Stay tuned for the announcement of Spring Boot 3.0.0-M5 next week!&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://projects.spring.io/spring-framework/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-framework/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-framework/docs/5.3.23/reference/html/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Dataflow 2.9.6 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/09/14/spring-cloud-dataflow-2-9-6-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Chris Bono</name>
-    </author>
-    <id>tag:spring.io,2022-09-14:4904</id>
-    <updated>2022-09-15T02:00:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I’m happy to announce that Spring Cloud Dataflow &lt;code&gt;2.9.6&lt;/code&gt; has been released and is now available from Maven Central.&lt;/p&gt;
-&lt;p&gt;This release updates to Postgres SQL driver &lt;code&gt;42.2.26&lt;/code&gt; to address &lt;a href="https://github.com/advisories/GHSA-r38f-c4h4-hqq2"&gt;CVE-2022-31197&lt;/a&gt;. See the &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/releases/tag/v2.9.6"&gt;release notes&lt;/a&gt; for more information.&lt;/p&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
-&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring - September 13th, 2022</title>
-    <link rel="alternate" href="https://spring.io/blog/2022/09/13/this-week-in-spring-september-13th-2022" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2022-09-13:4903</id>
-    <updated>2022-09-13T07:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! We&amp;rsquo;ve got a lot of good stuff to get to so let&amp;rsquo;s dive right into it! &lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/09/08/a-bootiful-podcast-hashicorp-s-rosemary-wang-on-securing-the-intersection-of-apps-and-ops-with-hashicorp-vault"&gt;A Bootiful Podcast: Hashicorp&amp;rsquo;s Rosemary Wang on securing the intersection of apps and ops with Hashicorp Vault&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;a nice video by my colleague Dan Vega: &lt;a href="https://www.youtube.com/watch?v=KYNR5js2cXE"&gt;Spring Security JWT&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;I also loved Dan&amp;rsquo;s video on &lt;a href="https://www.youtube.com/watch?v=s4X4SJv2RrU"&gt;Spring Security without the &lt;code&gt;WebSecurityConfigurerAdapter&lt;/code&gt; &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/710091966/0/baeldung~Dispatching-Queries-in-Axon-Framework/"&gt;Dispatching Queries in Axon Framework&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/710253652/0/baeldung~Guide-to-Find-the-Java-class-Version"&gt;Guide to Find the Java .class Version&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://spring.io/blog/2022/09/07/spring-cloud-2021-0-4-codename-jubilee-has-been-released"&gt;Spring Cloud 2021.0.4 (codename Jubilee) Has Been Released&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://feeds.feedblitz.com/~/710091964/0/baeldung~Static-Fields-and-Garbage-Collection"&gt;Static Fields and Garbage Collection&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/09/12/k8s-cve-feed-alpha/"&gt;Blog: Announcing the Auto-refreshing Official Kubernetes CVE Feed&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/09/09/kms-v2-improvements/"&gt;Blog: Kubernetes 1.25: KMS V2 Improvements&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://kubernetes.io/blog/2022/09/07/iptables-chains-not-api/"&gt;Blog: Kubernetes’s IPTables Chains Are Not API&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;this is an interesting post looking at how to &lt;a href="https://medium.com/@salithachathuranga94/unit-and-integration-testing-in-spring-boot-micro-service-901fc53b0dff"&gt;use JUnit with Spring Boot&lt;/a&gt;. The only thing I didn&amp;rsquo;t quite understand is why the author declares Mockito explicitly. I&amp;rsquo;m &lt;em&gt;pretty&lt;/em&gt; sure it&amp;rsquo;s brought in transitively in &lt;code&gt;spring-boot-starter-test&lt;/code&gt;, but either way: good post!&lt;/li&gt;
-&lt;/ul&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
