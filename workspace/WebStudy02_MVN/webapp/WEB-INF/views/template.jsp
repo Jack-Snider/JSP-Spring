@@ -32,7 +32,7 @@
 		</style>
 		
 		<!-- Custom styles for this template -->
-		<link href="<%=request.getContextPath()%>/resources/css/dashboard.css" rel="stylesheet">
+		<link href="${pageContext.request.contextPath }/resources/css/dashboard.css" rel="stylesheet">
 	</head>
 	<body class="d-flex flex-column vh-100">
 		<header>

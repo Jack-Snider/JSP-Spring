@@ -15,10 +15,26 @@ import kr.or.ddit.vo.MemberVO;
 @WebServlet("/member/memberView.do")
 public class MemberViewServlet extends HttpServlet{
 	private MemberService service = new MemberServiceImpl();
+			
+	private void viewResolve(
+			String logicalViewName, 
+			HttpServletRequest req, 
+			HttpServletResponse resp
+	) throws ServletException, IOException{
+		if(logicalViewName.startsWith("redirect:")) {
+			logicalViewName = logicalViewName.substring("redirect:".length());
+			resp.sendRedirect(req.getContextPath() + logicalViewName);
+		}else {
+			String viewName = "/"+logicalViewName+".tiles";
+			req.getRequestDispatcher(viewName).forward(req, resp);
+		}
+	}
+			
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
+		
 		
 		String memId = req.getParameter("who");
 		if(memId==null || memId.isEmpty()) {
@@ -30,8 +46,14 @@ public class MemberViewServlet extends HttpServlet{
 		
 		req.setAttribute("member", member);
 		
-		String viewName = "/WEB-INF/views/member/memberView.jsp";
-		req.getRequestDispatcher(viewName).forward(req, resp);
+		String layout = req.getParameter("layout");
+		if("GRID".equals(layout)) {
+			viewResolve("member/memberView", req, resp);
+		}else {
+			String viewName = "/WEB-INF/views/member/memberView.jsp";
+			req.getRequestDispatcher(viewName).forward(req, resp);
+		}
+		
 	}
 }
 

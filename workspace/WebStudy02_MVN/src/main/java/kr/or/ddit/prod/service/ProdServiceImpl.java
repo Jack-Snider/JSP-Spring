@@ -6,6 +6,7 @@ import kr.or.ddit.commons.exception.PKNotFoundException;
 import kr.or.ddit.enumpkg.ServiceResult;
 import kr.or.ddit.prod.dao.ProdDAO;
 import kr.or.ddit.prod.dao.ProdDAOImpl;
+import kr.or.ddit.vo.PagingVO;
 import kr.or.ddit.vo.ProdVO;
 
 public class ProdServiceImpl implements ProdService {
@@ -25,10 +26,15 @@ public class ProdServiceImpl implements ProdService {
 			throw new PKNotFoundException(prodId);
 		return prod;
 	}
+	
+	@Override
+	public int retrieveProdCount(PagingVO<ProdVO> pagingVO) {
+		return dao.selectTotalRecord(pagingVO);
+	}
 
 	@Override
-	public List<ProdVO> retrieveProdList() {
-		return dao.selectProdList();
+	public List<ProdVO> retrieveProdList(PagingVO<ProdVO> pagingVO) {
+		return dao.selectProdList(pagingVO);
 	}
 
 	@Override
@@ -40,3 +46,15 @@ public class ProdServiceImpl implements ProdService {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+

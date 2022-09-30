@@ -25,7 +25,7 @@
 					${num-2 }, ${3/4 }
 		논리연산자 : ${true and true }, ${alpha or false }, ${not alpha }		
 		비교연산자 : eq, ne, gt, lt, ge, le
-				${3 le 4 }, ${2 eq 2 }, ${3 ne 2 }
+<%-- 				${3 le 4 }, ${2 eq 2 }, ${3 ne 2 } --%>
 		단항연산자 : empty			
 			${empty alpha }, ${empty sample }, empty List : ${empty list }
 		삼항연산자 : 조건식? 참표현:거짓표현	

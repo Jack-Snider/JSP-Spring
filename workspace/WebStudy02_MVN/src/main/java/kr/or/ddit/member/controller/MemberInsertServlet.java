@@ -19,6 +19,8 @@ import org.apache.commons.lang3.StringUtils;
 import kr.or.ddit.enumpkg.ServiceResult;
 import kr.or.ddit.member.service.MemberService;
 import kr.or.ddit.member.service.MemberServiceImpl;
+import kr.or.ddit.validate.InsertGroup;
+import kr.or.ddit.validate.ValidateUtils;
 import kr.or.ddit.vo.MemberVO;
 
 @WebServlet("/member/memberInsert.do")
@@ -60,13 +62,11 @@ public class MemberInsertServlet extends HttpServlet{
 			throw new RuntimeException(e);
 		}
 		
-		Map<String, String> errors = new HashMap<>();
+		Map<String, String> errors =  new ValidateUtils<MemberVO>().validate(member, InsertGroup.class);
 		req.setAttribute("errors", errors);
 		
-		boolean valid = validate(member, errors);
-		
 		String logicalViewName = null;
-		if(valid) {
+		if(errors.isEmpty()) {
 			ServiceResult result = service.createMember(member);
 			switch (result) {
 			case PKDUPLICATED:
@@ -88,50 +88,6 @@ public class MemberInsertServlet extends HttpServlet{
 		viewResolve(logicalViewName, req, resp);
 	}
 
-	// Hibernate validator 
-	private boolean validate(MemberVO member, Map<String, String> errors) {
-		boolean valid = true;
-		if (StringUtils.isBlank(member.getMemId())) {
-			errors.put("memId", "회원아이디누락");
-			valid = false;
-		}
-		if (StringUtils.isBlank(member.getMemPass())) {
-			errors.put("memPass", "비밀번호누락");
-			valid = false;
-		}
-		if (StringUtils.isBlank(member.getMemName())) {
-			errors.put("memName", "회원명누락");
-			valid = false;
-		}
-		if (StringUtils.isBlank(member.getMemZip())) {
-			errors.put("memZip", "우편번호누락");
-			valid = false;
-		}
-		if (StringUtils.isBlank(member.getMemAdd1())) {
-			errors.put("memAdd1", "주소1누락");
-			valid = false;
-		}
-		if (StringUtils.isBlank(member.getMemAdd2())) {
-			errors.put("memAdd2", "주소2누락");
-			valid = false;
-		}
-		if (StringUtils.isBlank(member.getMemMail())) {
-			errors.put("memMail", "이메일누락");
-			valid = false;
-		}
-		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		if(StringUtils.isNotBlank(member.getMemBir())) {
-			try {
-				sdf.parse(member.getMemBir());
-			} catch (ParseException e) {
-				errors.put("memBir", "날짜 형식 확인");
-				valid = false;
-			}			
-		}
-		return valid;
-		
-	}
 }
 
 

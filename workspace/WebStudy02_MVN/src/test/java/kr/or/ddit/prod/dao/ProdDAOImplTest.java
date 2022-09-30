@@ -7,6 +7,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
+import kr.or.ddit.vo.PagingVO;
 import kr.or.ddit.vo.ProdVO;
 import lombok.extern.slf4j.Slf4j;
 
@@ -48,7 +49,9 @@ public class ProdDAOImplTest {
 
 	@Test
 	public void testSelectProdList() {
-		List<ProdVO> prodList = dao.selectProdList();
+		PagingVO<ProdVO> pagingVO = new PagingVO<>();
+		pagingVO.setCurrentPage(1);
+		List<ProdVO> prodList = dao.selectProdList(pagingVO);
 		log.info("prodList: {}", prodList);
 	}
 

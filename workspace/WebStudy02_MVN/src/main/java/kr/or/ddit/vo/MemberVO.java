@@ -4,8 +4,18 @@ import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.validation.groups.Default;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import kr.or.ddit.validate.DeleteGroup;
+import kr.or.ddit.validate.InsertGroup;
+import kr.or.ddit.validate.UpdateGroup;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -40,26 +50,39 @@ public class MemberVO implements Serializable{
 	
 	private int rnum;
 	
+	@NotBlank(groups = {Default.class, DeleteGroup.class})
 	private String memId;
+	
+	@NotBlank(groups = {Default.class, DeleteGroup.class})
+	@Size(min = 4, max = 12, groups = {Default.class, DeleteGroup.class})
 	@JsonIgnore
 	private transient String memPass;
+	@NotBlank
 	private String memName;
+	@NotBlank(groups = {InsertGroup.class})
 	@JsonIgnore
 	private transient String memRegno1;
+	@NotBlank(groups = {InsertGroup.class})
 	@JsonIgnore
 	private transient String memRegno2;
 	private String memBir;
+	@NotBlank
 	private String memZip;
+	@NotBlank
 	private String memAdd1;
+	@NotBlank
 	private String memAdd2;
 	private String memHometel;
 	private String memComtel;
 	private String memHp;
+	@Email
+	@NotBlank
 	private String memMail;
 	private String memJob;
 	private String memLike;
 	private String memMemorial;
 	private String memMemorialday;
+	@Min(0)
 	private Integer memMileage;
 	private Boolean memDelete;
 	
