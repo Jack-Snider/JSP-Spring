@@ -12,7 +12,7 @@
         				%>
 						<li class="nav-item">
 							<a class="nav-link" 
-								href="<%=request.getContextPath() %><%=menu.getMenuURL()%>">
+								href="${pageContext.request.contextPath }<%=menu.getMenuURL()%>">
 								<%=menu.getMenuText() %>
 							</a>
 						</li>

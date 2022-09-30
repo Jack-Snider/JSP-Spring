@@ -22,6 +22,8 @@ import kr.or.ddit.prod.dao.OthersDAO;
 import kr.or.ddit.prod.dao.OthersDAOImpl;
 import kr.or.ddit.prod.service.ProdService;
 import kr.or.ddit.prod.service.ProdServiceImpl;
+import kr.or.ddit.validate.InsertGroup;
+import kr.or.ddit.validate.ValidateUtils;
 import kr.or.ddit.vo.BuyerVO;
 import kr.or.ddit.vo.ProdVO;
 
@@ -51,6 +53,8 @@ public class ProdInsertServlet extends HttpServlet{
 		req.setAttribute("lprodList", lprodList);
 		req.setAttribute("buyerList", buyerList);
 		
+		req.setAttribute("command", "INSERT");
+		
 		super.service(req, resp);
 	}
 	
@@ -71,13 +75,12 @@ public class ProdInsertServlet extends HttpServlet{
 			throw new RuntimeException(e);
 		}
 		
-		Map<String, String> errors = new HashMap<>();
+		
+		Map<String, String> errors = new ValidateUtils<ProdVO>().validate(prod, InsertGroup.class);
 		req.setAttribute("errors", errors);
 		
-		boolean valid = validate(prod, errors);
-		
 		String logicalViewName = null;
-		if(valid) {
+		if(errors.isEmpty()) {
 			ServiceResult result = service.createProd(prod);
 			switch (result) {
 			case OK:
@@ -95,66 +98,6 @@ public class ProdInsertServlet extends HttpServlet{
 		viewResolve(logicalViewName, req, resp);
 	}
 	
-	// Hibernate validator 
-	private boolean validate(ProdVO prod, Map<String, String> errors) {
-		boolean valid = true;
-//		if (StringUtils.isBlank(prod.getProdId())) {
-//			errors.put("prodId", "상품코드누락");
-//			valid = false;
-//		}
-		if (StringUtils.isBlank(prod.getProdName())) {
-			errors.put("prodName", "상품명누락");
-			valid = false;
-		}
-		if (StringUtils.isBlank(prod.getProdLgu())) {
-			errors.put("prodLgu", "분류코드누락");
-			valid = false;
-		}
-		if (StringUtils.isBlank(prod.getProdBuyer())) {
-			errors.put("prodBuyer", "거래처코드누락");
-			valid = false;
-		}
-		if (prod.getProdCost()<0) {
-			errors.put("prodCost", "구매가누락");
-			valid = false;
-		}
-		if (prod.getProdPrice()<0) {
-			errors.put("prodPrice", "판매가누락");
-			valid = false;
-		}
-		if (prod.getProdSale()<0) {
-			errors.put("prodSale", "세일가누락");
-			valid = false;
-		}
-		if (StringUtils.isBlank(prod.getProdOutline())) {
-			errors.put("prodOutline", "개요누락");
-			valid = false;
-		}
-		if (StringUtils.isBlank(prod.getProdImg())) {
-			errors.put("prodImg", "상품이미지누락");
-			valid = false;
-		}
-		if (prod.getProdTotalstock()<0) {
-			errors.put("prodTotalstock", "총재고누락");
-			valid = false;
-		}
-		if (prod.getProdProperstock()<0) {
-			errors.put("prodProperstock", "적정재고누락");
-			valid = false;
-		}
-		
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-		if(StringUtils.isNotBlank(prod.getProdInsdate())) {
-			try {
-				sdf.parse(prod.getProdInsdate());
-			} catch (ParseException e) {
-				errors.put("ProdInsdate", "날짜 형식 확인");
-				valid = false;
-			}			
-		}
-		return valid;
-		
-	}
 }
 
 

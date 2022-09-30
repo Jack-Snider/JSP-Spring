@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>	
-<table>
+<table class="table table-bordered">
 	<tr>
 		<th>회원아이디</th>
 		<td>${member['memId'] }</td>
@@ -79,15 +79,23 @@
 		<td>${member['memDelete'] }</td>
 	</tr>
 	<tr>
+		<td colspan="2">
+			<a class="btn btn-secondary" href="#" onclick="history.back();">뒤로가기</a>
+		</td>
+	</tr>
+	<tr>
 		<th>구매기록</th>
 		<td>
-			<table>
+			<table class="table table-bordered">
 				<c:set value="${member.prodList }" var="prodList" />
 				<c:choose>
 					<c:when test="${not empty prodList }">
 						<c:forEach items="${prodList }" var="prod">
+							<c:url value="/prod/prodView.do" var="prodViewURL">
+								<c:param name="what" value="${prod.prodId }" />
+							</c:url>
 							<tr>
-								<td>${prod.prodName }</td>
+								<td><a href="${prodViewURL }">${prod.prodName }</a></td>
 								<td>${prod.lprodNm }</td>
 								<td>${prod.buyer.buyerName }</td>
 							</tr>

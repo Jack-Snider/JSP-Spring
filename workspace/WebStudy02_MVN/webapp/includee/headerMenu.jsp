@@ -7,13 +7,13 @@
   </button>
   <ul class="nav px-3 col">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="<%=request.getContextPath() %>/member/memberList.do">회원관리</a>
+      <a class="nav-link" href="${pageContext.request.contextPath }/member/memberList.do">회원관리</a>
     </li>
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="<%=request.getContextPath() %>/prod/prodList.do">상품관리</a>
+      <a class="nav-link" href="${pageContext.request.contextPath }/prod/prodList.do">상품관리</a>
     </li>
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="#">거래처관리</a>
+      <a class="nav-link" href="${pageContext.request.contextPath }/buyer/buyerList.do">거래처관리</a>
     </li>
     <li class="nav-item text-nowrap">
       <a class="nav-link" href="#">게시판</a>
@@ -21,10 +21,10 @@
   </ul>
   <ul class="nav px-3 col-2">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="<%=request.getContextPath() %>/login/loginForm.jsp">Sign in</a>
+      <a class="nav-link" href="${pageContext.request.contextPath }/login/loginForm.jsp">Sign in</a>
     </li>
     <li class="nav-item text-nowrap">
-      <a class="nav-link" href="<%=request.getContextPath() %>/login/logout.do">Sign out</a>
+      <a class="nav-link" href="${pageContext.request.contextPath }/login/logout.do">Sign out</a>
     </li>
   </ul>
 </nav>

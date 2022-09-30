@@ -26,8 +26,11 @@
 			</thead>
 			<tbody>
 				<c:set var="buyer" value="${prod.buyer }" />
+				<c:url value="/buyer/buyerView.do" var="buyerViewURL">
+					<c:param name="what" value="${buyer.buyerId }" />
+				</c:url>
 				<tr>
-					<td>${buyer.buyerName }</td>
+					<td><a href="${buyerViewURL }">${buyer.buyerName }</a></td>
 					<td>${buyer.buyerAdd1 }</td>
 					<td>${buyer.buyerCharger }</td>
 					<td>${buyer.buyerComtel }</td>
@@ -102,6 +105,15 @@
 		<td>${prod.prodMileage }</td>
 	</tr>
 	<tr>
+		<td colspan="2">
+			<c:url value="/prod/prodUpdate.do" var="updateURL">
+				<c:param name="what" value="${prod.prodId }" />
+			</c:url>
+			<input type="button" class="btn btn-primary" value="수정" onclick="location.href='${updateURL}';"/>
+			<a class="btn btn-secondary" href="<c:url value='/prod/prodList.do'/>">목록</a>
+		</td>
+	</tr>
+	<tr>
 		<th>구매자 정보</th>
 		<td>
 			<table class="table table-bordered">
@@ -117,9 +129,15 @@
 				<c:set var="memberList" value="${prod.memberList }" />
 				<c:if test="${not empty memberList }">
 					<c:forEach items="${memberList }" var="member">
+						<c:url value="/member/memberView.do" var="memberViewURL">
+							<c:param name="who" value="${member.memId }" />
+							<c:param name="layout" value="GRID" />
+						</c:url>
 						<tr>
 							<td>${member['memId'] }</td>
-							<td>${member['memName'] }</td>
+							<td>
+								<a href="${memberViewURL }">${member['memName'] }</a>
+							</td>
 							<td>${member['memAdd1'] }</td>
 							<td>${member['memMileage'] }</td>
 						</tr>
