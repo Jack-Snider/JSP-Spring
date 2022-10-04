@@ -1,13 +1,11 @@
 package kr.or.ddit.vo;
 
 import java.io.Serializable;
-import java.util.List;
 import java.util.Set;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.validation.groups.Default;
 
@@ -15,7 +13,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import kr.or.ddit.validate.DeleteGroup;
 import kr.or.ddit.validate.InsertGroup;
-import kr.or.ddit.validate.UpdateGroup;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -87,6 +84,8 @@ public class MemberVO implements Serializable{
 	private Boolean memDelete;
 	
 	private Set<ProdVO> prodList; // has Many
+	
+	private String memRole;
 	
 	
 	public String getMemTest() {
