@@ -4,9 +4,7 @@ public class OtherConcrete implements Target {
 
 	@Override
 	public void request() {
-
-		System.out.println( "target의 구현체 OhterConcrete 동작" );
-
+		System.out.println("target 의 구현체 OtherConcrete 동작");
 	}
 
 }

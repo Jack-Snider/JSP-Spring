@@ -42,13 +42,15 @@ Receive Data Type
 			}
 		});
 		console.log(data);
-		let sendDataType = $("[name=sendDataType]:checked").val();
-		if(sendDataType == 'json'){
-			settings.data = JSON.stringify(data);
-			settings.contentType = "application/json;charset=UTF-8";
-		}else{
-			settings.data = data;
-		}
+		  let sendDataType = $("[name=sendDataType]:checked").val();
+	      if(sendDataType == 'json'){
+	         settings.data = JSON.stringify(data);
+	         settings.contentType = "application/json;charset=UTF-8";
+	      }else{
+	         settings.data = data;
+	      }
+	   }
+
 	}
 	
 	let makeReceiveDataType = function(settings){
@@ -66,11 +68,6 @@ Receive Data Type
 		let settings = {
 				url : url,
 				method : method,
-				success : function(resp) {
-					console.log(resp);
-					calForm.after(resp.expression);
-					
-				},
 				error : function(errorResp) {
 					alert(errorResp.status);
 				}

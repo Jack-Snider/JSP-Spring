@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!--
+		Convention Over Configurationi 
+		객체 하나 추가 
+		bean은 대충 객체 하나를 컨테이너에 담는거임, 즉, bean 하나가 객체 하나
+	-->
+	<bean id = "sampleDAO_O" class="kr.or.ddit.sample.dao.SampleDAOImpl_Oracle"></bean>
+	<bean id = "sampleDAO_M" class = "kr.or.ddit.sample.dao.SampleDAOImpl_MariaDB"></bean>
+	
+	<bean id = "sampleService" class = "kr.or.ddit.sample.service.SampleServiceImpl">
+		<!--	이 객체 같은 경우는 기본 생성자가 없고 1개 이상의 파라미터를 받아서
+			 	contructor-arg 태그로 파라미터를 넘겨줘야 한다.
+		-->
+		
+		<!-- constructor-arg는 생성자를 통한 injection 구조 -->
+		<!-- name은 넘길 파라미터의 이름이고 ref는 어떤 객체인지를 정해준다. ( 위에 만든 객체 중 1개 ) -->
+		<constructor-arg name = "dao" ref="sampleDAO_O"></constructor-arg>
+	</bean>
+	
+	
+	<bean id = "sampleView" class = "kr.or.ddit.sample.view.SampleView">
+		
+		<!-- property는 setter를 통한 injection 구조이다. -->
+		<property name="service" ref = "sampleService"></property>
+	</bean>
+	
+
+
+</beans>

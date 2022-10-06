@@ -1,11 +1,7 @@
 package kr.or.ddit.designpattern.adapter;
 
 public class Adaptee {
-	
-	public void specifiedRequest() {
-		
-		System.out.println( "Adaptee 의 specifiedRequest가 동작함ㄴ" );
-		
+	public void specificRequest() {
+		System.out.println("Adaptee 의 specificRequest가 동작함");
 	}
-	
 }

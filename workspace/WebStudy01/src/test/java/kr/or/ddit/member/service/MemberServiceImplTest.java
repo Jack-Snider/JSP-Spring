@@ -1,8 +1,6 @@
 package kr.or.ddit.member.service;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
@@ -16,21 +14,19 @@ public class MemberServiceImplTest {
 	
 	@Test
 	public void testCreateMember() {
-		
 		MemberVO member = new MemberVO();
-		member.setMemId( "a002" );
-		member.setMemPass( "java" );
-		member.setMemName( "신규" );
-		member.setMemZip( "000" );
-		member.setMemAdd1( "대전" );
-		member.setMemAdd2( "오류" );
-		member.setMemMail( "aa@naver.com" );
-		ServiceResult result = service.createMember( member );
-		assertEquals( ServiceResult.PKDUPLICATED ,  result );
-		member.setMemId( "a003" );
-		result = service.createMember( member );
-		assertEquals( ServiceResult.OK , result );
-		
+		member.setMemId("a002");
+		member.setMemPass("java");
+		member.setMemName("신규");
+		member.setMemZip("000");
+		member.setMemAdd1("대전");
+		member.setMemAdd2("오류");
+		member.setMemMail("aa@naver.com");
+		ServiceResult result = service.createMember(member);
+		assertEquals(ServiceResult.PKDUPLICATED, result);
+		member.setMemId("a003");
+		result = service.createMember(member);
+		assertEquals(ServiceResult.OK, result);
 	}
 
 	@Test(expected = UserNotFoundException.class)

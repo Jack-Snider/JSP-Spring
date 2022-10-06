@@ -5,18 +5,14 @@ import kr.or.ddit.designpattern.templatemethod.example1.DerivedClass2;
 import kr.or.ddit.designpattern.templatemethod.example1.TemplateClass;
 
 public class Example1Ground {
-
 	public static void main(String[] args) {
-		
 		TemplateClass[] array = new TemplateClass[] {
-				new DerivedClass1(), new DerivedClass2()
+			new DerivedClass1()
+			, new DerivedClass2()
 		};
 		
-		
-		for( TemplateClass obj : array ) {
+		for(TemplateClass obj : array) {
 			obj.template();
 		}
-		
 	}
-	
 }

@@ -76,19 +76,13 @@
 	<hr class="hide">
 	<div id="kakaoContent" class="cont_error" role="main">
 				<h2 class="tit_error">해당 서비스를 제공하는 과정에서 서버 오류가 발생했습니다.</h2>
-				
 		<%
-		
-			ErrorData errorData = pageContext.getErrorData();
-			
-		
-		%>				
-				
+			ErrorData errorData = pageContext.getErrorData();		
+		%>
 		<p class="desc_error">
-			에러 상태 코드 : <%= errorData.getStatusCode() %><br>
-			발생한 예외 : <%= errorData.getThrowable().getMessage() %>
+			에러 상태 코드 : <%=errorData.getStatusCode() %> <br>
+			발생한 예외 : <%=errorData.getThrowable().getMessage() %>
 		</p>
-
 		<p class="desc_error">
 			관련해 <a href="http://cs.daum.net/" class="link_cs">고객센터</a>로 문의해 주시면 친절하게 안내해 드리겠습니다.
 		</p>

@@ -13,7 +13,7 @@ entityReference=\#8DCBE2 | null | null | null | null | null
 newFileTemplateName=xml declaration
 org.eclipse.wst.sse.ui.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart.lastActivePage=1
-overriddenByCSS=,doctypeExternalPubref,declBorder,tagBorder,cdataText,declBoder,piBorder,doctypeExtrenalSysref,tagName,commentText,doctypeExternalId,doctypeName,tagAttributeValue,tagAttributeEquals,entityReference,commentBorder,tagAttributeName,piContent,cdataBorder,xmlContent,
+overriddenByCSS=,cdataBorder,cdataText,commentBorder,commentText,declBoder,declBorder,doctypeExternalId,doctypeExternalPubref,doctypeExtrenalSysref,doctypeName,entityReference,piBorder,piContent,tagAttributeEquals,tagAttributeName,tagAttributeValue,tagBorder,tagName,xmlContent,
 piBorder=\#FFFFFF | null | null | null | null | null
 piContent=\#D8D8D8 | null | null | null | null | null
 tagAttributeEquals=\#D8D8D8 | null | null | null | null | null

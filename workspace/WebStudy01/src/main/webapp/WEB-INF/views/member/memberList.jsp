@@ -44,8 +44,11 @@
 <form id='viewForm' action="<%=request.getContextPath() %>/member/memberView.do">
 	<input type='hidden' name='who'  />
 </form>
-<form id = "deleteForm" action = "<%=request.getContextPath() %>/member/memberDelete.do">
-	<input type = "hidden" name = 'who'>
+<form id='updateForm' action="<%=request.getContextPath() %>/member/memberUpdate.do">
+	<input type='hidden' name='who'  />
+</form>
+<form id="deleteForm" action="<%=request.getContextPath() %>/member/memberDelete.do" method="post">
+	<input type='hidden' name='who'  />
 </form>
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -60,12 +63,13 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger" id = "deleteBtn">DELETE</button>
+        <button type="button" class="btn btn-danger" id="updateBtn">UPDATE</button>
+        <button type="button" class="btn btn-danger" id="deleteBtn">DELETE</button>
       </div>
     </div>
   </div>
 </div>
-<script type="text/javascript" src='<%=request.getContextPath() %>/resources/js/member/memberList.js?<%= System.currentTimeMillis()%>'></script>
+<script type="text/javascript" src='<%=request.getContextPath() %>/resources/js/member/memberList.js?<%=System.currentTimeMillis()%>'></script>
 
 
 

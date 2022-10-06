@@ -1,14 +1,14 @@
 package kr.or.ddit.prod.controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,20 +18,33 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import kr.or.ddit.enumpkg.ServiceResult;
+import kr.or.ddit.file.MultipartFile;
+import kr.or.ddit.file.filter.StandardMultipartHttpServletRequest;
 import kr.or.ddit.prod.dao.OthersDAO;
 import kr.or.ddit.prod.dao.OthersDAOImpl;
 import kr.or.ddit.prod.service.ProdService;
 import kr.or.ddit.prod.service.ProdServiceImpl;
-import kr.or.ddit.validate.InsertGroup;
 import kr.or.ddit.validate.UpdateGroup;
 import kr.or.ddit.validate.ValidateUtils;
 import kr.or.ddit.vo.BuyerVO;
 import kr.or.ddit.vo.ProdVO;
 
 @WebServlet("/prod/prodUpdate.do")
+@MultipartConfig
 public class ProdUpdateServlet extends HttpServlet{
 	private ProdService service = new ProdServiceImpl();
 	private OthersDAO othersDAO = new OthersDAOImpl();
+	
+	String saveFolderURL = "/resources/prodImages";
+	File saveFolder;
+	@Override
+	public void init(ServletConfig config) throws ServletException {
+		super.init(config);
+		String saveFolderPath = getServletContext().getRealPath(saveFolderURL);
+		saveFolder = new File(saveFolderPath);
+		if(!saveFolder.exists()) saveFolder.mkdirs();
+	}
+	
 	
 	private void viewResolve(
 			String logicalViewName, 
@@ -61,7 +74,6 @@ public class ProdUpdateServlet extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
 		
 		String prodId = req.getParameter("what");
 		
@@ -87,6 +99,12 @@ public class ProdUpdateServlet extends HttpServlet{
 			BeanUtils.populate(prod, req.getParameterMap());
 		} catch (IllegalAccessException | InvocationTargetException e) {
 			throw new RuntimeException(e);
+		}
+		
+		if(req instanceof StandardMultipartHttpServletRequest) {
+			MultipartFile prodImage = ((StandardMultipartHttpServletRequest) req).getFile("prodImage");
+			prod.setProdImage(prodImage);
+			prod.saveTo(saveFolder);
 		}
 		
 		

@@ -4,9 +4,7 @@ public class DerivedClass1 extends TemplateClass {
 
 	@Override
 	protected void stepTwo() {
-		
-		System.out.println( "1단계의 case1" );
-
+		System.out.println("2단계의 case1");
 	}
 
 }
