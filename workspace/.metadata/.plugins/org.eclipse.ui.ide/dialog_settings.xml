@@ -1,46 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<section name="ResourceNavigator">
-		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
-		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1661503909805"/>
-	</section>
-	<section name="NewWizardAction">
-	</section>
-	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
-		<item key="ShowStatusLine" value="true"/>
-		<item key="History" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/LanguageLab/src/main/java/kr/or/ddit/exception/Exception.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/mybatis/CustomSqlSessionFactoryBuilder.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/resources/kr/or/ddit/mybatis/Configuration.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/WEB-INF/views/template.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/member/controller/MemberViewServlet.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/WEB-INF/views/index.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/commons/controller/IndexServlet.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/WEB-INF/tiles.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/member/dao/MemberDAO.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/member/service/MemberService.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/resources/js/member/memberList.js&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/test/java/kr/or/ddit/member/dao/MemberDAOImplTest.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/member/controller/MemberListServlet.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/member/dao/MemberDAOImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/prod/service/ProdService.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/prod/dao/ProdDAOImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/prod/dao/ProdDAO.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/vo/SearchVO.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/vo/PagingVO.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/prod/controller/OthersListServlet.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/resources/kr/or/ddit/mybatis/mapper/Member.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/commons/JsonViewServlet.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/resources/kr/or/ddit/mybatis/mapper/Others.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/WEB-INF/views/member/memberList.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/WEB-INF/views/member/memberForm.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/member/controller/MemberInsertServlet.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/vo/MemberVO.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/vo/ProdVO.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/prod/controller/ProdInsertServlet.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/WEB-INF/views/prod/prodForm.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/java/kr/or/ddit/prod/controller/ProdListServlet.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/WEB-INF/views/prod/prodList.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/WEB-INF/views/prod/prodView.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/resources/kr/or/ddit/mybatis/mapper/Prod.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/resources/kr/or/ddit/mybatis/mapper/Buyer.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;"/>
-		<item key="ShowDerived" value="false"/>
-		<item key="FilterByLocation" value="false"/>
-		<item key="WorkingSet" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;"/>
-		<section name="DialogBoundsSettings">
-			<item key="DIALOG_HEIGHT" value="500"/>
-			<item key="DIALOG_WIDTH" value="600"/>
-			<item key="DIALOG_X_ORIGIN" value="367"/>
-			<item key="DIALOG_Y_ORIGIN" value="197"/>
-			<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
-		</section>
-	</section>
 	<section name="SmartImportWizard">
-		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
-		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
-		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
-		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<item value="false" key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN"/>
+		<item value="false" key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED"/>
+		<item value="true" key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES"/>
+		<item value="true" key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy02_MVN"/>
+		</list>
 	</section>
 	<section name="ExternalProjectImportWizard">
-		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
-		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy03_MVC"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyCharset"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyMVN"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyStandalone"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyWeb"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyWebMVN"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\LanguageLab"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\Servers"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy_homework"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy01"/>
 			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy02_MVN"/>
 			<item value="C:\Users\PC-04\Desktop\WebStudy02_MVN"/>
 			<item value="C:\Users\PC-04\Desktop\WebStudy01"/>
-			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy01"/>
 			<item value="\\DESKTOP-963G6R1\A_TeachingMaterial\6.JspSpring\workspace\WebStudy01"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
 		</list>
+	</section>
+	<section name="ResourceNavigator">
+		<item value="Aggregate for window 1661503909805" key="ResourceWorkingSetFilter.STORE_WORKING_SET"/>
+		<item value="1" key="ResourceViewer.STORE_SORT_TYPE"/>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item value="false" key="FilterByLocation"/>
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/LanguageLab/src/main/java/kr/or/ddit/designpattern/templatemethod/example2/SqlMapClient.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/LanguageLab/src/main/java/kr/or/ddit/designpattern/templatemethod/example2/SqlMapClientImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SpringIoCLab/src/main/resources/kr/or/ddit/sample/conf/Sample-Context.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SpringIoCLab/src/main/java/kr/or/ddit/sample/dao/SampleDAOImpl_Oracle.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SpringIoCLab/src/main/java/kr/or/ddit/sample/dao/SampleDAOImpl_MariaDB.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SpringIoCLab/src/main/java/kr/or/ddit/sample/view/SampleView.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SpringIoCLab/src/main/java/kr/or/ddit/sample/service/SampleServiceImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SpringIoCLab/src/main/resources/kr/or/ddit/sample/conf/DI-Context.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SpringIoCLab/src/main/java/kr/or/ddit/sample/view/DIContainerTestView.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<item value="false" key="ShowDerived"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="367" key="DIALOG_X_ORIGIN"/>
+			<item value="197" key="DIALOG_Y_ORIGIN"/>
+		</section>
 	</section>
 </section>

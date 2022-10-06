@@ -2,12 +2,10 @@ package kr.or.ddit.member.controller;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +15,8 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import kr.or.ddit.enumpkg.ServiceResult;
+import kr.or.ddit.file.MultipartFile;
+import kr.or.ddit.file.filter.StandardMultipartHttpServletRequest;
 import kr.or.ddit.member.service.MemberService;
 import kr.or.ddit.member.service.MemberServiceImpl;
 import kr.or.ddit.validate.UpdateGroup;
@@ -24,6 +24,7 @@ import kr.or.ddit.validate.ValidateUtils;
 import kr.or.ddit.vo.MemberVO;
 
 @WebServlet("/member/memberUpdate.do")
+@MultipartConfig
 public class MemberUpdateServlet extends HttpServlet{
 	
 	private MemberService service = new MemberServiceImpl();
@@ -45,7 +46,6 @@ public class MemberUpdateServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		req.setCharacterEncoding("UTF-8");
 		
 		String memId = req.getParameter("who");
 		
@@ -67,7 +67,6 @@ public class MemberUpdateServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
 			throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
 		MemberVO member = new MemberVO();
 		req.setAttribute("member", member);
 //		member.setMemId(req.getParameter("memId"));
@@ -75,6 +74,11 @@ public class MemberUpdateServlet extends HttpServlet{
 			BeanUtils.populate(member, req.getParameterMap());
 		} catch (IllegalAccessException | InvocationTargetException e) {
 			throw new RuntimeException(e);
+		}
+		
+		if( req instanceof StandardMultipartHttpServletRequest ) {
+			MultipartFile memImage =  ((StandardMultipartHttpServletRequest) req).getFile( "memImage" );
+			member.setMemImage( memImage );
 		}
 		
 		

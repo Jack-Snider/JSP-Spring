@@ -1,29 +1,21 @@
-<%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
 <%
-   System.out.println(session.getLastAccessedTime());
-%>
+	System.out.println(session.getLastAccessedTime());
+%>    
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title> 08/sessionTimer.jsp </title>
-<jsp:include page="/includee/preScript.jsp"/>
-<script type="text/javascript" src="<%=request.getContextPath()%>/resources/js/moment.min.js"></script>
-<style type="text/css">
-#mymodal{
-   visibility: hidden;
-}
-</style>
+<title>08/sessionTimer.jsp</title>
+<jsp:include page="/includee/preScript.jsp" />
+
 </head>
 <body>
 <h4>application hashcode : <%=application.hashCode() %></h4>
 <h4> 세션 타이머 </h4>
-<div id="timerArea"></div>
+<div id="timerArea">1:59</div>
 
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -43,28 +35,46 @@
   </div>
 </div>
 
-
+<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/sessionTimer.js"></script>
 <script type="text/javascript">
-
-   
-   
+	$("#timerArea").sessionTimer(<%=session.getMaxInactiveInterval() %>, "#exampleModal");
 </script>
-
+<script type="text/javascript" src="<%=request.getContextPath() %>/resources/js/moment.min.js"></script>
+<jsp:include page="/includee/postScript.jsp" />
 </body>
 </html>
 
-<!-- 
-   1. session timeout 초기값으로 갖는 타이머 출력
-   
-   2. 1초를 주기로 타이머를 디스카운트
-      -> 타이머가 0이되면, 디스카운트 중단.
-   
-   3. "timeout - 60" 동안 대기한 후 메시지 창(modal) 디스플레이 출력
-   
-   4-1. NO 버튼클릭, 메시지창 닫기
-   
-   4-2. YES 버튼클릭, 
-      1) 서버의 세션을 연장하기 위한 비동기 요청. : response body가 없도록 method 설정.
-      2) 타이머 리셋
-      3) 메세지 창 닫기.
- -->
+<!-- 1. session timeout 초기값으로 갖는 타이머 출력. -->
+
+<!-- 2. 1초를 주기로 타이머를 디스카운트. -->
+<!--    -> 타이머가 0이되면, 디스카운트 중단. -->
+
+<!-- 3. "timeout - 60" 동안 대기한 후 메시지 창(modal) 디스플레이 -->
+
+<!-- 4-1. NO 버튼 클릭, 메시지창 닫기 -->
+
+<!-- 4-2. YES 버튼 클릭,  -->
+<!-- 	1) 서버의 세션을 연장하기 위한 비동기 요청. :  response body가 없도록 method 설정. -->
+<!-- 	2) 타이머 리셋 -->
+<!-- 	3) 메시지 창 닫기.     -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

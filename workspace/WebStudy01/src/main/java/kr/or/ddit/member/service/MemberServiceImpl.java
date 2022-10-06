@@ -1,6 +1,5 @@
 package kr.or.ddit.member.service;
 
-import java.sql.SQLException;
 import java.util.List;
 
 import kr.or.ddit.commons.exception.UserNotFoundException;
@@ -16,21 +15,20 @@ public class MemberServiceImpl implements MemberService {
 	@Override
 	public ServiceResult createMember(MemberVO member) {
 		ServiceResult result = null;
-		try {			
-			retrieveMember( member.getMemId() );
+		try {
+			retrieveMember(member.getMemId());
 			result = ServiceResult.PKDUPLICATED;
-		}catch( UserNotFoundException e ) {
-			int rowcnt = dao.insertMember( member );
+		}catch (UserNotFoundException e) {
+			int rowcnt = dao.insertMember(member);
 			result = rowcnt > 0 ? ServiceResult.OK : ServiceResult.FAIL;
 		}
-		
 		return result;
 	}
 
 	@Override
 	public MemberVO retrieveMember(String memId) {
 		MemberVO member = dao.selectMember(memId);
-		if( member == null )
+		if(member==null)
 			throw new UserNotFoundException(memId);
 		return member;
 	}
@@ -42,24 +40,31 @@ public class MemberServiceImpl implements MemberService {
 
 	@Override
 	public ServiceResult modifyMember(MemberVO member) {
-		// TODO Auto-generated method stub
-		return null;
+		retrieveMember(member.getMemId());
+		int rowcnt = dao.updateMember(member);
+		return rowcnt > 0 ? ServiceResult.OK : ServiceResult.FAIL;
 	}
 
 	@Override
-	public ServiceResult removeMember( MemberVO member ) {
-		
-		ServiceResult result = null;
-		
-		try {
-			int cnt = dao.deleteMember( member.getMemId() );
-			result = cnt > 0 ? ServiceResult.OK : ServiceResult.FAIL;
-		} catch ( UserNotFoundException e ) {
-			throw new RuntimeException( e ); 
-		}
-		
-		return result;
-		
+	public ServiceResult removeMember(MemberVO member) {
+		retrieveMember(member.getMemId());
+		int rowcnt = dao.deleteMember(member.getMemId());
+		return rowcnt > 0 ? ServiceResult.OK : ServiceResult.FAIL;
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

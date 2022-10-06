@@ -22,8 +22,8 @@
 	<classpathentry kind="lib" path="lib/jackson-annotations-2.13.4-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-annotations-2.13.4-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-core-2.13.4.jar"/>
-	<classpathentry kind="lib" path="lib/jackson-core-2.13.4-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-core-2.13.4-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/jackson-core-2.13.4-sources.jar"/>
 	<classpathentry kind="lib" path="lib/jackson-dataformat-xml-2.13.4.jar"/>
 	<classpathentry kind="lib" path="lib/stax2-api-4.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/woodstox-core-6.3.1.jar"/>

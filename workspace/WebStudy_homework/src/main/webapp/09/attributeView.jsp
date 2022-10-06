@@ -7,12 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<pre>
-   페이지 : <%=pageContext.getAttribute("pageAttr") %>
-   요청 : <%=request.getAttribute("requestAttr") %>
-   세션 : <%=session.getAttribute("sessionAttr") %>
-   어플리케이션 : <%=application.getAttribute("applicationAttr") %>
+<pre style="border: 2px solid red;">
+	페이지 : <%=pageContext.getAttribute("pageAttr") %>
+	요청 : <%=request.getAttribute("requestAttr") %>
+	세션 : <%=session.getAttribute("sessionAttr") %>
+	어플리케이션 : <%=application.getAttribute("applicationAttr") %>
 </pre>
-
 </body>
 </html>

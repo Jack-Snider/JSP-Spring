@@ -6,10 +6,9 @@
 	<a href="<c:url value='/mypage.do'/>">${authMember.memName }[${authMember.memRole }]</a>님 로그인 상태.
 	<pre>
 	Principal : <%=request.getUserPrincipal().getName() %>
-		
-		<!-- 
+	<!-- 
 		${pageContext.request.userPrincipal.realUser.memRole }
-		 -->
+	 -->
 	Principal type : <%=request.getUserPrincipal().getClass() %>
 	</pre>
 </c:if>

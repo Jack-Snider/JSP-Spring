@@ -20,7 +20,6 @@ public class OthersListServlet extends HttpServlet{
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
 		String servletPath = req.getServletPath();
 		if("/prod/getLprodList.do".equals(servletPath)) {
 			List<Map<String, Object>> lprodList = othersDAO.selectLprodList();

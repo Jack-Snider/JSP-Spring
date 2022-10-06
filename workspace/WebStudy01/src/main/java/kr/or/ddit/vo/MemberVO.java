@@ -5,25 +5,18 @@ import java.io.Serializable;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * 회원 관리 ( Domain Layer )
- * @author Jack Snider
+ * 회원 관리(Domain Layer)
  *
  */
 public class MemberVO implements Serializable{
-	
 	private String memId;
-	
 	@JsonIgnore
 	private transient String memPass;
-	
 	private String memName;
-	
 	@JsonIgnore
 	private transient String memRegno1;
-	
 	@JsonIgnore
 	private transient String memRegno2;
-	
 	private String memBir;
 	private String memZip;
 	private String memAdd1;
@@ -37,8 +30,7 @@ public class MemberVO implements Serializable{
 	private String memMemorial;
 	private String memMemorialday;
 	private Integer memMileage;
-	private boolean memDelete;
-	
+	private Boolean memDelete;
 	public String getMemId() {
 		return memId;
 	}
@@ -147,10 +139,10 @@ public class MemberVO implements Serializable{
 	public void setMemMileage(Integer memMileage) {
 		this.memMileage = memMileage;
 	}
-	public boolean getMemDelete() {
+	public Boolean getMemDelete() {
 		return memDelete;
 	}
-	public void setMemDelete(boolean memDelete) {
+	public void setMemDelete(Boolean memDelete) {
 		this.memDelete = memDelete;
 	}
 	@Override
@@ -184,7 +176,5 @@ public class MemberVO implements Serializable{
 				+ memLike + ", memMemorial=" + memMemorial + ", memMemorialday=" + memMemorialday + ", memMileage="
 				+ memMileage + ", memDelete=" + memDelete + "]";
 	}
-
-	
 	
 }

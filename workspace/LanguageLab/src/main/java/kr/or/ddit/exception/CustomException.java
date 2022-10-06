@@ -25,8 +25,6 @@ public class CustomException extends RuntimeException{
 	public CustomException(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
-	} // unchecked
+	}
 	
-	
-
 }

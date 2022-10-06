@@ -72,6 +72,7 @@
 		     TO_CHAR(MEM_MEMORIALDAY, 'YYYY-MM-DD') MEM_MEMORIALDAY,   
 		     MEM_MILEAGE,    MEM_DELETE
 		     , MEM_ROLE
+		     , MEM_IMG
 		     , PROD_ID, PROD_NAME, PROD_COST, PROD_PRICE, PROD_MILEAGE
 		     , BUYER_NAME
 		     , LPROD_NM                                
@@ -96,7 +97,8 @@
 			   , MEM_JOB             
 			   , MEM_LIKE            
 			   , MEM_MEMORIAL        
-			   , MEM_MEMORIALDAY     
+			   , MEM_MEMORIALDAY    
+			   , MEM_IMG 
 			) VALUES (               
 					#{memId,jdbcType=VARCHAR}
 					, #{memPass,jdbcType=VARCHAR}
@@ -115,6 +117,7 @@
 					, #{memLike,jdbcType=VARCHAR}
 					, #{memMemorial,jdbcType=VARCHAR}
 					, #{memMemorialday,jdbcType=DATE}
+					, #{memImg,jdbcType=BLOB}
 			)						 
 	</insert>
 	
@@ -132,6 +135,9 @@
 			, MEM_LIKE = #{memLike,jdbcType=VARCHAR}
 			, MEM_MEMORIAL = #{memMemorial,jdbcType=VARCHAR}
 			, MEM_MEMORIALDAY = TO_DATE( #{memMemorialday,jdbcType=DATE} , 'YYYY-MM-DD')
+			<if test="memImg neq null and memImg.length gt 0">
+				, MEM_IMG = #{memImg,jdbcType=BLOB}
+			</if>
 		WHERE MEM_ID = #{memId,jdbcType=VARCHAR}	
 	</update>
 	<delete id="deleteMember" parameterType="string">

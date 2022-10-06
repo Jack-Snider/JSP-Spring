@@ -18,7 +18,7 @@ public class DataBasePropertyDAOImpl implements PropertyDAO {
 	public PropertyVO selectProperty(String propertyName) {
 		
 		String sql = "SELECT PROPERTY_NAME, PROPERTY_VALUE, DESCRIPTION FROM DATABASE_PROPERTIES";
-				sql += " WHERE PROPERTY_NAME = ?";
+				sql += " WHERE PROPERTY_NAME = ? ";
 		
 		PropertyVO propertyVO = null;
 		
@@ -26,10 +26,10 @@ public class DataBasePropertyDAOImpl implements PropertyDAO {
 		
 		try(
 			Connection oracleConn = ConnectionFactory.getConnection();
-			PreparedStatement oracleStmt = oracleConn.prepareStatement( sql );
+			PreparedStatement oracleStmt = oracleConn.prepareStatement(sql);
 		) {
-			oracleStmt.setString( 1 ,  propertyName );
-			ResultSet rs = oracleStmt.executeQuery(sql);
+			oracleStmt.setString(1, propertyName);
+			ResultSet rs = oracleStmt.executeQuery();
 			ResultSetMetaData rsmd = rs.getMetaData();
 			int count = rsmd.getColumnCount();
 			headers = new String[count];
@@ -83,11 +83,31 @@ public class DataBasePropertyDAOImpl implements PropertyDAO {
 
 	@Override
 	public void insertProperty(PropertyVO propertyVO) {
-		
-		if( 1 == 1 ) {
-			throw new RuntimeException( "햐당 뷰는 insert 대상이 아님" );  
-		}
-
+		if(1==1)
+			throw new RuntimeException("해당 뷰는 insert 대상이 아님.");
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

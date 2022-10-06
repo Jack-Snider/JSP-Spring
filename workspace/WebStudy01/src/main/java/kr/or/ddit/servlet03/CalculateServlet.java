@@ -33,11 +33,19 @@ public class CalculateServlet extends HttpServlet{
 			}
 		}else {
 			vo = new CalculateVO();
-			try {
-				BeanUtils.populate(vo, req.getParameterMap());
-			} catch (IllegalAccessException | InvocationTargetException e) {
-				throw new IOException(e);
-			}
+			String opParam = req.getParameter("operator");
+			int rightParam = Integer.parseInt(req.getParameter("rightOp"));
+			int leftParam = Integer.parseInt(req.getParameter("leftOp"));
+			
+			vo.setLeftOp(leftParam);
+			vo.setRightOp(rightParam);
+			vo.setOperator(OperatorType.valueOf(opParam));
+			
+//			try {
+//				BeanUtils.populate(vo, req.getParameterMap());
+//			} catch (IllegalAccessException | InvocationTargetException e) {
+//				throw new IOException(e);
+//			}
 		}
 		return vo;
 	}

@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
 <h4>가입양식</h4>
-<form method="post">
+<form method="post" enctype="multipart/form-data">
 	<table class="table table-bordered">
 		<tr>
 			<th>회원아이디</th>
@@ -28,6 +28,17 @@
 				<span class="error">${errors['memName'] }</span>
 			</td>
 		</tr>
+		
+		
+		<tr>
+			<th>회원이미지</th>
+			<td>
+				<input type = "file" name ="memImage" accept="image/*" />
+			</td>
+		</tr>
+		
+		
+		
 		<tr>
 			<th>주민번호1</th>
 			<td>
@@ -36,6 +47,11 @@
 				<span class="error">${errors['memRegno1'] }</span>
 			</td>
 		</tr>
+		
+		
+		
+		
+		
 		<tr>
 			<th>주민번호2</th>
 			<td>

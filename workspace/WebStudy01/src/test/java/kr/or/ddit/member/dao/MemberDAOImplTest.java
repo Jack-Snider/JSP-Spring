@@ -4,28 +4,30 @@ import static org.junit.Assert.*;
 
 import java.util.List;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import kr.or.ddit.vo.MemberVO;
 
 public class MemberDAOImplTest {
 	MemberDAO dao = new MemberDAOImpl();
-
+	MemberVO member; 
+	@Before
+	public void setUp() {
+		member = new MemberVO();
+		member.setMemId("a002");
+		member.setMemPass("java");
+		member.setMemName("신규");
+		member.setMemZip("000");
+		member.setMemAdd1("대전");
+		member.setMemAdd2("오류");
+		member.setMemMail("aa@naver.com");
+	}
+	
 	@Test
 	public void testInsertMember() {
-		
-		MemberVO member = new MemberVO();
-		member.setMemId( "a002" );
-		member.setMemPass( "java" );
-		member.setMemName( "신규" );
-		member.setMemZip( "000" );
-		member.setMemAdd1( "대전" );
-		member.setMemAdd2( "오류" );
-		member.setMemMail( "aa@naver.com" );
-		int rowcnt = dao.insertMember( member );
-		assertEquals( 1 , rowcnt );
-		
-		
+		int rowcnt = dao.insertMember(member);
+		assertEquals(1, rowcnt);
 	}
 
 	@Test
@@ -50,7 +52,8 @@ public class MemberDAOImplTest {
 
 	@Test
 	public void testUpdateMember() {
-		fail("Not yet implemented");
+		int rowcnt = dao.updateMember(member);
+		assertEquals(1, rowcnt);
 	}
 
 	@Test
@@ -59,3 +62,15 @@ public class MemberDAOImplTest {
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+

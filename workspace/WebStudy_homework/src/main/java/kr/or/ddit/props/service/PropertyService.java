@@ -5,21 +5,51 @@ import java.util.List;
 import kr.or.ddit.props.vo.PropertyVO;
 
 /**
- * Property 관리를 위한 Business Logic Layer( Service Logic Layers, Logic , Layer ) 
- * @author PC-04
- *
- *
- *
+ * Property 관리를 위한 Business Logic Layer(Service Logic Layer, Logic Layer)
  *
  */
 public interface PropertyService {
+	/**
+	 * 프로퍼티 한쌍 조회, 해당 프로퍼티가 존재하지 않는 경우, PKNotFoundException 발생시킴.
+	 * @param propertyName
+	 * @return
+	 */
+	public PropertyVO readProperty(String propertyName);
 	
-	// 프로미터 한쌍 태칭, 조회, 해당 쓰라ㅔ빠로 신고다니기라랍니다. )
-	public PropertyVO readProperty( String propertyName );
+	/**
+	 * 프로퍼티 조회후 description 이 없는 경우, 
+	 * "라뽁이 만들었음" 이라는 description 을 설정함.
+	 * @return
+	 */
+	public List<PropertyVO> readProperties();
 	
-	
-	public List<PropertyVO> readProperList();
-	
-	public void createProperty( PropertyVO VO );
-	
+	/**
+	 * 새로운 프로퍼티 추가
+	 * @param vo
+	 */
+	public void createProperty(PropertyVO vo);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

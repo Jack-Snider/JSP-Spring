@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -17,6 +18,8 @@ import org.apache.commons.beanutils.BeanUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import kr.or.ddit.enumpkg.ServiceResult;
+import kr.or.ddit.file.MultipartFile;
+import kr.or.ddit.file.filter.StandardMultipartHttpServletRequest;
 import kr.or.ddit.member.service.MemberService;
 import kr.or.ddit.member.service.MemberServiceImpl;
 import kr.or.ddit.validate.InsertGroup;
@@ -24,6 +27,7 @@ import kr.or.ddit.validate.ValidateUtils;
 import kr.or.ddit.vo.MemberVO;
 
 @WebServlet("/member/memberInsert.do")
+@MultipartConfig
 public class MemberInsertServlet extends HttpServlet{
 	
 	private MemberService service = new MemberServiceImpl();
@@ -52,7 +56,6 @@ public class MemberInsertServlet extends HttpServlet{
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) 
 			throws ServletException, IOException {
-		req.setCharacterEncoding("UTF-8");
 		MemberVO member = new MemberVO();
 		req.setAttribute("member", member);
 //		member.setMemId(req.getParameter("memId"));
@@ -61,6 +64,14 @@ public class MemberInsertServlet extends HttpServlet{
 		} catch (IllegalAccessException | InvocationTargetException e) {
 			throw new RuntimeException(e);
 		}
+		
+		// 이미지 처리
+		if(req instanceof StandardMultipartHttpServletRequest) {
+			MultipartFile prodImage = ((StandardMultipartHttpServletRequest) req).getFile( "memImage" );
+			member.setMemImage( prodImage );
+
+		}
+		
 		
 		Map<String, String> errors =  new ValidateUtils<MemberVO>().validate(member, InsertGroup.class);
 		req.setAttribute("errors", errors);
