@@ -11,18 +11,18 @@
     </Console>
   </Appenders>
   <Loggers>
-     <Logger name="org.springframework" level="info" additivity="false">
-        <AppenderRef ref="Console"/>
-     </Logger>
-     <Logger name="kr.or.ddit" level="info" additivity="false">
-        <AppenderRef ref="Console"/>
-     </Logger>
-     <Logger name="jdbc.sqltiming" level="debug" additivity="false">
-        <AppenderRef ref="Console"/>
-     </Logger>
-     <Logger name="jdbc.resultsettable" level="debug" additivity="false">
-        <AppenderRef ref="Console"/>
-     </Logger>
+  	<Logger name="org.springframework" level="info" additivity="false">
+  		<AppenderRef ref="Console"/>
+  	</Logger>
+  	<Logger name="kr.or.ddit" level="info" additivity="false">
+  		<AppenderRef ref="Console"/>
+  	</Logger>
+  	<Logger name="jdbc.sqltiming" level="debug" additivity="false">
+  		<AppenderRef ref="Console"/>
+  	</Logger>
+  	<Logger name="jdbc.resultsettable" level="debug" additivity="false">
+  		<AppenderRef ref="Console"/>
+  	</Logger>
     <Root level="error">
       <AppenderRef ref="Console"/>
     </Root>

@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>글번호</th>
+			<td>${board.boNo }</td>
+		</tr>
+		<tr>
+			<th>제목</th>
+			<td>${board.boTitle }</td>
+		</tr>
+		<tr>
+			<th>작성자</th>
+			<td>${board.boWriter }</td>
+		</tr>
+		<tr>
+			<th>아이피</th>
+			<td>${board.boIp }</td>
+		</tr>
+		<tr>
+			<th>이메일</th>
+			<td>${board.boMail }</td>
+		</tr>
+		<tr>
+			<th>비밀번호</th>
+			<td>${board.boPass }</td>
+		</tr>
+		<tr>
+			<th>내용</th>
+			<td>${board.boContent }</td>
+		</tr>
+		<tr>
+			<th>작성일</th>
+			<td>${board.boDate }</td>
+		</tr>
+		<tr>
+			<th>조회수</th>
+			<td>${board.boHit }</td>
+		</tr>
+		<tr>
+			<th>추천수</th>
+			<td>${board.boRec }</td>
+		</tr>
+		<tr>
+			<th>부모글</th>
+			<td>${board.boParent }</td>
+		</tr>
+	</table>
+</body>
+</html>
