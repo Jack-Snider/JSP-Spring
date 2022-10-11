@@ -7,8 +7,8 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>src/main/resources/kr/or/ddit/sample/conf/Sample-Context.xml</config>
-		<config>src/main/resources/kr/or/ddit/sample/conf/DI-Context.xml</config>
+		<config>src/main/resources/kr/or/ddit/auto/conf/Parent-Context.xml</config>
+		<config>src/main/resources/kr/or/ddit/auto/conf/Child-Context.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

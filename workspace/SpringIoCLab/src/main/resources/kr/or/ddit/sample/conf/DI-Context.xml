@@ -4,69 +4,58 @@
 	xmlns:c="http://www.springframework.org/schema/c"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-	default-init-method="start"
-	default-destroy-method="stop"
+		default-init-method="start" default-destroy-method="stop"
 	>
-	<!-- 
-	 -->
 
-<!--  
-	Spring DI container 사용 단계
-	1.	spring-context 의존성 추가
-	2.	spring bean configurationi file 작성
-		1)	bean 등록
-		2)	등록된 bean 들간의 의존관계 형성( 의존성 주입 : Dependency Injection )
-				-setter Injection : property, p
-				-constructor Injection : constructor-arg, c
-	3.	어플리케이션 entry point에서 Container 객체( ApplicationContext ) 생성
-	4.	getBean 필요 객체 주입.
--->
 
-	<bean id = "sampleDAO_O" class = "kr.or.ddit.sample.dao.SampleDAOImpl_Oracle"
-		
+<!-- 	Spring DI container 사용 단계 -->
+<!-- 	1. spring-context 의존성 추가. -->
+<!-- 	2. spring bean configuration file 작성 -->
+<!-- 		1) bean 등록 -->
+<!-- 		2) 등록된 bean 들간의 의존관계 형성(의존성 주입 : Dependency Injection) -->
+<!-- 			- setter Injection : property, p -->
+<!-- 			- constructor Injection : constructor-arg, c -->
+<!-- 	3. 어플리케이션의 entry point 에서 Container 객체(ApplicationContext) 생성 -->
+<!-- 	4. getBean 필요 객체 주입.		 -->
+
+	<bean id="sampleDAO_O" class="kr.or.ddit.sample.dao.SampleDAOImpl_Oracle" 
 	/>
-	<!-- lazy-init =	"true" : 미리 안만들어놓고 주입 되면 그떄 만들게
-						"false" : 미리 만들어 놓을게~ 
-		
-		*이걸로 객체 주입의 순서를 결정 할 수 있음
-		
-		depends-on="sampleService"
-		의미 : "내가 sampleService에 의존 할 수 도 있으니 얘보다 나를 먼저 만들어야 돼"
-		
-	-->
 	
-	<bean id = "sampleService" class = "kr.or.ddit.sample.service.SampleServiceImpl"
+	<bean id="sampleService" class="kr.or.ddit.sample.service.SampleServiceImpl" 
 		p:dao-ref="sampleDAO_O"
-		
 	/>
-	<!-- c는 생성자 Injection을 보다 쉽게 해주는 역할 -->
 	
-	<bean id = "sampleView1" class="kr.or.ddit.sample.view.SampleView"
+	<bean id="sampleView1" class="kr.or.ddit.sample.view.SampleView" 
 		p:service-ref="sampleService"
 		lazy-init="true"
 	/>
-	<!-- prototype : 주입 할 때마다 새로운 객체를 생성, 객체의 생성 시점이 뒤로 밀림,( 미리 안 만들어놈 ) -->
+<!-- 	<bean id="sampleView2" class="kr.or.ddit.sample.view.SampleView"  -->
+<!-- 		p:service-ref="sampleService" -->
+<!-- 	/> -->
 	
-	<!-- 
-	<bean id = "sampleView2" class="kr.or.ddit.sample.view.SampleView"
-		p:service-ref="sampleService"
-		
-	/>
-	 -->
-	 
-	<!-- Spring container 빈 관리 특성 -->
-	<!--	1.	특별한 설정이 없는 한,  등록된 빈은 기본적으로 singleton 형태로 관리됨.
-				scope - prototype : 주입시마다 새로운 객체 생성, 주입전까지 생성이 미뤄짐. 
-		
-			2.	특별한 설정이 없는 한, 등록된 모든 빈이 컨테이너가 초기화될때 일시에 객체를 생성함.
-				lazy-init : 주입 전까지 생성이 미뤄짐.
-				
-			3.	빈의 객체를 생성할때, 생성 순서를 제어함.
-				depend-on : 의존 가능성이 있는 빈의 객체를 먼저 생성.
-			
-			4.	컨테이너가 관리하는 빈은 미리 생성되고 생명주기가 형성된다, lifecycle callback 존재
-				init-method : 필요한 모든 빈의 주입이 완료된 후에 초기화가 종료.
-	-->
-	
-	
+<!-- 	Spring container 빈 관리 특성 -->
+<!-- 	1. 특별한 설정이 없는 한, 등록된 빈은 기본적으로 singleton 형태로 관리됨.-->
+<!-- 		scope - prototype : 주입시마다 새로운 객체 생성. 주입전까지 생성이 미뤄짐. -->
+<!-- 	2. 특별한 설정이 없는 한, 등록된 모든 빈이 컨테이너가 초기화될때 일시에 객체를 생성함. -->
+<!-- 		lazy-init : 주입 전까지 생성이 미뤄짐. -->
+<!-- 	3. 빈의 객체를 생성할때, 생성 순서를 제어함. -->
+<!--		depends-on : 의존 가능성이 있는 빈의 객체를 먼저 생성. -->
+<!--	4. 컨테이너 관리 빈은 생명주기가 형성됨, lifecycle callback 존재. -->
+<!--		init-method : 모든 빈의 주입이 완료된 후에 초기화가 종료. -->
 </beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
