@@ -27,6 +27,15 @@ public class BoardRetrieveController {
 		, Model model
 	) {
 		
+		/*
+		 * Model model
+		 * 
+		 * 여기서 model은 일종의 scope의 속성을 가지는 객체인데
+		 * 범위는 request와 동일하다.
+		 * 
+		 * 
+		 */
+		
 		PagingVO<BoardVO> pagingVO = new PagingVO<>();
 		pagingVO.setCurrentPage(currentPage);
 		

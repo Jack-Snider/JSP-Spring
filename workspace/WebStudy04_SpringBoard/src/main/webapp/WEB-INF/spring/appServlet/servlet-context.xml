@@ -24,7 +24,23 @@
 <!-- 	ViewResolver : Logical View Name 를 기반으로 View Layer 를 검색하는 역할.			 -->
 <!-- 	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean> -->
 <!-- 	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"></bean> -->
+<!--
+		 
+		 
+		 <mvc:annotation-driven></mvc:annotation-driven> 의 역할
+		 얘를 선언하면 Spring MVC패턴에 필요한 모든 애들 만들어준다.
+		 HandlerMapping이랑 HandlerAdapter, ViewResolver와 같은 애들을 말이다...
+		 
+ -->
 	<mvc:annotation-driven></mvc:annotation-driven>
+	
+	<!--	그런데 여기서 따로 bean으로 ViewResolver를 선언한 이유는
+			내가 원하는 url주소를 resolve하려고 하기 때문이다.
+			
+			그럼 <mvc:annotation-driven></mvc:annotation-driven> 얘가 만든 ViewSolver말고
+			내가 아래에 새롭게 만든 viewResolver가 적용된다. 
+			
+	 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" 
 		p:prefix="/WEB-INF/jsp/"
 		p:suffix=".jsp"
