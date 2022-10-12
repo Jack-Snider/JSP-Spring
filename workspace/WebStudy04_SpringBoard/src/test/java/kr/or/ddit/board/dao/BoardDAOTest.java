@@ -43,5 +43,11 @@ public class BoardDAOTest {
 		assertNotNull(boardList);
 		log.info("boardList : {}", boardList);
 	}
+	@Test
+	public void testSelectBoard() {
+		BoardVO board = dao.selectBoard(300);
+		assertNotNull(board);
+		log.info("board : {}", board);
+	}
 
 }

@@ -2,18 +2,39 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kr.or.ddit.board.dao.BoardDAO">
 <!-- 	게시글의 목록 조회 : 페이징 + 검색(제목-title, 작성자-writer, 내용-content, 전체) -->
-
-
+	<sql id="searchFrag">
+		<where>
+			<if test="simpleCondition neq null and @org.apache.commons.lang3.StringUtils@isNotBlank(simpleCondition.searchWord)">
+				<choose>
+					<when test="simpleCondition.searchType eq 'title'">
+						INSTR(BO_TITLE, #{simpleCondition.searchWord}) > 0
+					</when>
+					<when test="simpleCondition.searchType eq 'writer'">
+						INSTR(BO_WRITER, #{simpleCondition.searchWord}) > 0
+					</when>
+					<when test="simpleCondition.searchType eq 'content'">
+						INSTR(BO_CONTENT, #{simpleCondition.searchWord}) > 0
+					</when>
+					<otherwise>
+						INSTR(BO_TITLE, #{simpleCondition.searchWord}) > 0
+						OR INSTR(BO_WRITER, #{simpleCondition.searchWord}) > 0
+						OR INSTR(BO_CONTENT, #{simpleCondition.searchWord}) > 0
+					</otherwise>
+				</choose>
+			</if>
+		</where>
+	</sql>
 	<select id="selectTotalRecord" parameterType="PagingVO" resultType="int">
 		SELECT COUNT(*)
 		FROM FREEBOARD
+		<include refid="searchFrag" />
 	</select>
-	
 	<select id="selectBoardList" parameterType="PagingVO" resultType="BoardVO">
 		WITH SORTEDBOARD AS (
 		    SELECT BO_NO, BO_TITLE, BO_WRITER,
 		        BO_DATE, BO_HIT, BO_REC
 		    FROM FREEBOARD
+		    <include refid="searchFrag" />
 		    ORDER BY BO_NO DESC
 		), RNUMBOARD AS (
 		    SELECT ROWNUM RNUM, SORTEDBOARD.*
@@ -25,8 +46,7 @@
 			WHERE RNUM >= #{startRow} AND RNUM <= #{endRow}
 		]]>
 	</select>
-	
-	<select id = "selectBoard" parameterType = "int" resultType = "BoardVO">
+	<select id="selectBoard" parameterType="int" resultType="BoardVO">
 		SELECT
 		    BO_NO,    BO_TITLE,    BO_WRITER,
 		    BO_IP,    BO_MAIL,    BO_PASS,
@@ -35,13 +55,27 @@
 		FROM FREEBOARD
 		WHERE BO_NO = #{boNo}
 	</select>
-	
-	<update id = "incrementBoHit" parameterType="int">
+	<update id="incrementBoHit" parameterType="int">
 		UPDATE FREEBOARD
 		SET
 		BO_HIT = BO_HIT + 1
 		WHERE BO_NO = #{boNo}
 	</update>
-	
-	
 </mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
