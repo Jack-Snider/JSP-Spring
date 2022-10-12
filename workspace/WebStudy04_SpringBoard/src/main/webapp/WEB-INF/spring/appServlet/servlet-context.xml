@@ -24,6 +24,15 @@
 <!-- 	ViewResolver : Logical View Name 를 기반으로 View Layer 를 검색하는 역할.			 -->
 <!-- 	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping"></bean> -->
 <!-- 	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"></bean> -->
+	<!--
+		전략객체들을 위와 같이 하나씩 선언 할 수 도 있지만
+		아래와 같이
+		<mvc:annotation-driven></mvc:annotation-driven>
+		이거 하나로 다 만들 수도 있다.
+		
+		전략객체들은 
+		FrontController, HandlerMapping, HandlerAdapter 등이 있다.  
+	 -->
 	<mvc:annotation-driven></mvc:annotation-driven>
 <!-- 	한가지 전략객체를 여러 구현체로 등록하는 경우, 반드시 order 설정 필요. -->
 <!-- 	경우에 따라 order 가 가장 마지막이 되어야하는 전략객체도 있음. -->
@@ -31,11 +40,14 @@
 
 <!-- 	/WEB-INF/jsp//etc/result.jsp -->
 
+	<!-- ViewResolver 영역 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" 
 		p:prefix="/WEB-INF/jsp/"
 		p:suffix=".jsp"
+		
 	/>
 <!-- 	logicalviewName 과 등록된 definition name 이 동일하면 view 해결. -->
+	<!-- definnition은 tiles파일에 있는 태그들 -->
 	<bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer" 
 		p:definitions="/WEB-INF/tiles/*-tiles.xml"
 	/>

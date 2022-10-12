@@ -12,8 +12,13 @@
 <!-- 	스키마 종류 : beans, c, p, util, mybatis-spring -->
 <!-- 스프링과 mybatis 연동 -->
 <!-- 1. DataSource bean 등록 -->
+	
+	<!-- properties 파일 읽어오기 -->
 	<util:properties id="dbInfo" location="classpath:/kr/or/ddit/mybatis/DBInfo.properties" />
 
+	<!--
+		위에서 읽어온 애를 통해 Connection객체 생성 
+	 -->
 	<bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" 
 		p:driverClassName="#{dbInfo.driverClassName}"
 		p:url="#{dbInfo['url']}"
@@ -24,7 +29,14 @@
 		p:maxWaitMillis="#{dbInfo['maxWait']}"
 		p:maxIdle="#{dbInfo['maxIdle']}"
 	/>
+	
 <!-- 2. SqlSessionFactory 빌드 -->
+	<!--
+		 SqlSessionFactoryBean : Spring이랑 mybatis랑 mapping해주는 객체
+		 
+		 위에서 만든 Connection객체를 참조하면서 sqlSessionFactory객체 생성 
+		 
+	 -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean" 
 		p:dataSource-ref="dataSource"
 		p:configLocation="classpath:/kr/or/ddit/mybatis/Configuration.xml"
@@ -32,6 +44,7 @@
 	/>
 	
 <!-- 	3. SqlSessionTemplate  등록 : Optional -->
+	<!-- ??? -->
 	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" 
 		c:sqlSessionFactory-ref="sqlSessionFactory"
 	/>
@@ -39,6 +52,15 @@
 <!-- 	4. Mapper Scanner 활용. -->
 <!-- kr.or.ddit.member.dao -->
 <!-- kr.or.ddit.member.prod.dao -->
+
+	<!--
+		위의 애들을 annotation에 Mapper로 등록한다.
+		그리고
+		
+		factory-ref="sqlSessionFactory" 
+		얘로 factory객체를 찍어낸다.
+		 
+	 -->
 	<mybatis-spring:scan base-package="kr.or.ddit.**.dao"
 		annotation="org.apache.ibatis.annotations.Mapper"
 		factory-ref="sqlSessionFactory"
