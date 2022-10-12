@@ -1,4 +1,4 @@
-package kr.or.ddit.board.vo;
+	package kr.or.ddit.board.vo;
 
 import java.util.List;
 

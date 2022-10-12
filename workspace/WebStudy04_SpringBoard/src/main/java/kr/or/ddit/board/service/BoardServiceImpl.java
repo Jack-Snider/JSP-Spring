@@ -24,7 +24,7 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public BoardVO retrieveBoard( int boNo ) {
+	public BoardVO retrieveBoard(int boNo) {
 		BoardVO board = boardDAO.selectBoard(boNo);
 		if(board==null)
 			throw new RuntimeException(String.format("%d 글번호의 글이 없음.", boNo));
@@ -34,14 +34,31 @@ public class BoardServiceImpl implements BoardService {
 
 	@Override
 	public List<BoardVO> retrieveBoardList(PagingVO<BoardVO> pagingVO) {
-		// TODO Auto-generated method stub
-		return boardDAO.selectBoardList( pagingVO );
+		return boardDAO.selectBoardList(pagingVO)
+				;
 	}
 
 	@Override
 	public int retrieveBoardCount(PagingVO<BoardVO> pagingVO) {
-		// TODO Auto-generated method stub
-		return boardDAO.selectTotalRecord( pagingVO );
+		return boardDAO.selectTotalRecord(pagingVO);
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
