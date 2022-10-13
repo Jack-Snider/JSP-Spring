@@ -2,28 +2,9 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd" >
 <configuration>
 	<settings>
-		<!-- mybatis에서 기본으로 제공하고 있는 함수 -->
 		<setting name="mapUnderscoreToCamelCase" value="true"/>
 	</settings>	
 	<typeAliases>
-		<!-- 
-			Alias설정
-			이걸 함으로써 mappers에서 코드 어시스트 가능해짐 
-		-->
 		<package name="kr.or.ddit.board.vo"/>
 	</typeAliases>
 </configuration>
-
-
-<!--
-
-	DB연결을 위한 파일 만들기 순서
-	1.		/WebStudy04_SpringBoard/src/main/resources/kr/or/ddit/mybatis/DBInfo.properties
-	
-	2.		/WebStudy04_SpringBoard/src/main/resources/kr/or/ddit/mybatis/Configuration.xml
-	2-1.	mappers
-	
-	3.		/WebStudy04_SpringBoard/src/main/webapp/WEB-INF/spring/datasource-context.xml
-
- 
- -->

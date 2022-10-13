@@ -4,16 +4,27 @@ import java.util.List;
 
 import kr.or.ddit.board.vo.BoardVO;
 import kr.or.ddit.board.vo.PagingVO;
+import kr.or.ddit.enumpkg.ServiceResult;
 
 /**
  * 게시판 관리용 Business Logic Layer
  *
  */
 public interface BoardService {
-//	createBoard
+	public ServiceResult createBoard(BoardVO board);
 	public BoardVO retrieveBoard(int boNo);
 	public List<BoardVO> retrieveBoardList(PagingVO<BoardVO> pagingVO);
 	public int retrieveBoardCount(PagingVO<BoardVO> pagingVO);
-//	modifyBoard
-//	removeBoard
+	/**
+	 * 게시글 수정(인증 필요)
+	 * @param board
+	 * @return RuntimeException, INVALIDPASSWORD, OK, FAIL
+	 */
+	public ServiceResult modifyBoard(BoardVO board);
+	/**
+	 * 게시글 삭제(인증 필요)
+	 * @param board
+	 * @return RuntimeException, INVALIDPASSWORD, OK, FAIL
+	 */
+	public ServiceResult removeBoard(BoardVO board);
 }

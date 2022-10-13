@@ -14,11 +14,11 @@ import kr.or.ddit.board.vo.PagingVO;
  */
 @Mapper
 public interface BoardDAO {
-//	insertBoard
+	public int insertBoard(BoardVO board);
 	public BoardVO selectBoard(@Param("boNo") int boNo);
 	public int incrementBoHit(@Param("boNo") int boNo);
 	public List<BoardVO> selectBoardList(PagingVO<BoardVO> pagingVO);
 	public int selectTotalRecord(PagingVO<BoardVO> pagingVO);
-//	updateBoard
-//	deleteBoard
+	public int updateBoard(BoardVO board);
+	public int deleteBoard(BoardVO board);
 }
