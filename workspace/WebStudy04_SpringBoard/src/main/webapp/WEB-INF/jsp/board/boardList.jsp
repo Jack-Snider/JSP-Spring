@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>    
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %> 
 <c:set var="boardList" value="${pagingVO.dataList }" />
 <table class="table table-bordered table-strip">
 	<thead class="table-dark">
 		<tr>
-			<th>글번호</th>
-			<th>제목</th>
+			<th><spring:message code="board.boNo" /></th>
+			<th><spring:message code="board.boTitle" /></th>
 			<th>작성자</th>
 			<th>작성일</th>
 			<th>조회수</th>
@@ -45,6 +46,7 @@
 		<input type="button" value="검색" id="searchBtn"
 			class="btn btn-primary"
 		/>
+		<a class="btn btn-success" href="<c:url value='/board/boardInsert.do'/>">새글쓰기</a>
 	</div>
 </div>
 <script type="text/javascript">

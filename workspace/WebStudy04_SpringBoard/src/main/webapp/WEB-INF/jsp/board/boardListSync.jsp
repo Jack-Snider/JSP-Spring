@@ -71,6 +71,7 @@
 		<input type="button" value="검색" id="searchBtn"
 			class="btn btn-primary"
 		/>
+		<a class="btn btn-success" href="<c:url value='/board/boardInsert.do'/>">새글쓰기</a>
 	</div>
 </div>
 <script type="text/javascript">

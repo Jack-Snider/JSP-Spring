@@ -61,6 +61,46 @@
 		BO_HIT = BO_HIT + 1
 		WHERE BO_NO = #{boNo}
 	</update>
+	<insert id="insertBoard" parameterType="BoardVO">
+		<selectKey resultType="int" keyProperty="boNo" order="BEFORE">
+			SELECT FREEBOARD_SEQ.nextval
+			FROM DUAL
+		</selectKey>
+		INSERT INTO FREEBOARD
+		(
+			BO_NO
+			, BO_TITLE
+			, BO_WRITER
+			, BO_IP
+			, BO_MAIL
+			, BO_PASS
+			, BO_CONTENT
+			, BO_DATE
+		)VALUES
+		(
+			#{boNo,jdbcType=NUMERIC}
+			, #{boTitle,jdbcType=VARCHAR}
+			, #{boWriter,jdbcType=VARCHAR}
+			, #{boIp,jdbcType=VARCHAR}
+			, #{boMail,jdbcType=VARCHAR}
+			, #{boPass,jdbcType=VARCHAR}
+			, #{boContent,jdbcType=CLOB}
+			, SYSDATE
+		)
+	</insert>
+	<update id="updateBoard" parameterType="BoardVO">
+		UPDATE FREEBOARD
+		SET
+			BO_TITLE = #{boTitle,jdbcType=VARCHAR}
+			, BO_MAIL = #{boMail,jdbcType=VARCHAR}
+			, BO_CONTENT = #{boContent,jdbcType=CLOB}
+		WHERE BO_NO = #{boNo}
+	</update>
+	
+	<delete id="deleteBoard" parameterType="BoardVO">
+		DELETE FROM FREEBOARD
+		WHERE BO_NO = #{boNo}
+	</delete>
 </mapper>
 
 
