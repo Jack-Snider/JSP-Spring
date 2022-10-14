@@ -27,4 +27,30 @@ public interface BoardService {
 	 * @return RuntimeException, INVALIDPASSWORD, OK, FAIL
 	 */
 	public ServiceResult removeBoard(BoardVO board);
+	
+	/**
+	 * @param boNo
+	 * @return 갱신된 추천수
+	 */
+	public int recommend(int boNo);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

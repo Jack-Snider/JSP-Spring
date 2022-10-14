@@ -48,6 +48,7 @@ public class BoardInsertController {
 		, Errors errors
 		, Model model
 	) {
+		
 		log.info("Post 메소드 핸들러 boardInsert 실행");
 		String viewName = null;
 		if(!errors.hasErrors()) {

@@ -33,6 +33,14 @@
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
+	<filter>
+		<filter-name>MultipartFilter</filter-name>
+		<filter-class>org.springframework.web.multipart.support.MultipartFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MultipartFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 	
 <!-- 	3. 하위 컨테이너 생성, FrontController Pattern 활용. -->
 	<!-- The front controller of this Spring Web application, responsible for handling all application requests -->
