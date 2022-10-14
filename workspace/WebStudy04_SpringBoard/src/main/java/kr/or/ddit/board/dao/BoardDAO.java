@@ -21,4 +21,6 @@ public interface BoardDAO {
 	public int selectTotalRecord(PagingVO<BoardVO> pagingVO);
 	public int updateBoard(BoardVO board);
 	public int deleteBoard(BoardVO board);
+	
+	public int incrementRec(int boNo);
 }

@@ -5,7 +5,7 @@
 
 <script src="${pageContext.request.contextPath }/resources/js/ckeditor/ckeditor.js"></script>
 
-<form:form method="post" modelAttribute="board">  
+<form:form method="post" modelAttribute="board" enctype="multipart/form-data">  
 <table class="table table-bordered">
 	<tr>
 		<th><spring:message code="board.boTitle"/></th>
@@ -45,6 +45,14 @@
 		</td>
 	</tr>
 	<tr>
+		<th><spring:message code="board.boFiles"/></th>
+		<td>
+			<input type="file" name="boFiles" />
+			<input type="file" name="boFiles" />
+			<input type="file" name="boFiles" />
+		</td>
+	</tr>
+	<tr>
 		<th><spring:message code="board.boContent" /></th>
 		<td>
 			<form:textarea path="boContent" class="form-control"/>
@@ -60,8 +68,20 @@
 </table>
 </form:form>
 <script>
-	CKEDITOR.replace('boContent');
+	CKEDITOR.replace('boContent', {
+		filebrowserImageUploadUrl:"${cPath}/board/imageUpload.do?type=image"
+	});
 </script>
+
+
+
+
+
+
+
+
+
+
 
 
 

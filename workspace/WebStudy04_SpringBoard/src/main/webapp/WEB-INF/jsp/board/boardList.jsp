@@ -8,10 +8,10 @@
 		<tr>
 			<th><spring:message code="board.boNo" /></th>
 			<th><spring:message code="board.boTitle" /></th>
-			<th>작성자</th>
-			<th>작성일</th>
-			<th>조회수</th>
-			<th>추천수</th>
+			<th><spring:message code="board.boWriter"/></th>
+			<th><spring:message code="board.boDate"/></th>
+			<th><spring:message code="board.boHit"/></th>
+			<th><spring:message code="board.boRec"/></th>
 		</tr>
 	</thead>
 	<tbody id="listBody">
