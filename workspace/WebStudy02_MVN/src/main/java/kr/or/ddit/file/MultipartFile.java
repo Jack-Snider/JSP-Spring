@@ -9,7 +9,6 @@ import java.io.InputStream;
  *
  */
 public interface MultipartFile {
-	
 	public byte[] getBytes() throws IOException;
 	public String getContentType();
 	public InputStream getInputStream() throws IOException;
@@ -17,6 +16,5 @@ public interface MultipartFile {
 	public String getOriginalFilename();
 	public long getSize();
 	public boolean isEmpty();
-	public void transferTo(File dest) throws IOException;
-	
+	public void transferTo(File dest) throws IOException;	
 }

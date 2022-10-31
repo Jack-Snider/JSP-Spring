@@ -6,28 +6,26 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
-//import kr.or.ddit.props.dao.DataBasePropertyDAOImpl;
+import kr.or.ddit.props.dao.FileSystemPropertyDAOImpl;
 import kr.or.ddit.props.dao.PropertyDAO;
 import kr.or.ddit.props.vo.PropertyVO;
 
 @Service
 public class PropertyServiceImpl implements PropertyService {
 //	HighCohesionLooseCoupling
-//	private PropertyDAO dao = new FileSystemPropertyDAOImpl();
-	
 	private PropertyDAO dao;
-	
+
 //	@Inject
-	public PropertyServiceImpl( PropertyDAO dao ) {
+	public PropertyServiceImpl(PropertyDAO dao) {
 		super();
 		this.dao = dao;
 	}
 
 	@Override
-	public PropertyVO readProperty( String propertyName ) {
-		PropertyVO vo = dao.selectProperty( propertyName );
-		if( vo==null )
-			throw new RuntimeException( propertyName );
+	public PropertyVO readProperty(String propertyName) {
+		PropertyVO vo = dao.selectProperty(propertyName);
+		if(vo==null)
+			throw new RuntimeException(propertyName);
 		return vo;
 	}
 

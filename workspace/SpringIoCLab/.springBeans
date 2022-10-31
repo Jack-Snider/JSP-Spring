@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/resources/kr/or/ddit/auto/conf/Parent-Context.xml</config>
 		<config>src/main/resources/kr/or/ddit/auto/conf/Child-Context.xml</config>
+		<config>src/main/resources/kr/or/ddit/batch/conf/task-context.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

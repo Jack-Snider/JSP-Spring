@@ -11,7 +11,6 @@ public class HelloMaven {
 		try(
 			InputStream is = HelloMaven.class.getResourceAsStream("");	
 		){
-			StringUtils
 		}
 	}
 }

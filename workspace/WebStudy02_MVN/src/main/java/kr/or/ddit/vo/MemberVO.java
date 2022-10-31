@@ -1,13 +1,10 @@
 package kr.or.ddit.vo;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.Base64;
 import java.util.Set;
-import java.util.UUID;
 
-import javax.servlet.annotation.MultipartConfig;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
@@ -47,11 +44,10 @@ import lombok.extern.slf4j.Slf4j;
  *  	has Many ->  collection   
  *  	has A -> association
  */
-@Slf4j
 @Data
 @EqualsAndHashCode(of="memId")
 @ToString(exclude = {"memPass", "memRegno1", "memRegno2"})
-@MultipartConfig
+@Slf4j
 public class MemberVO implements Serializable{
 	
 	private int rnum;
@@ -96,41 +92,23 @@ public class MemberVO implements Serializable{
 	
 	private String memRole;
 	
-	// 프로필 이미지를 위한 필드
-	private byte[] memImg; // 서버가 DB에 저장하는 용도
-	private MultipartFile memImage; // 클라이언트로부터 받는 용도
-	
-	
-	// 이미지가 이미 있나 없나 확인
-	public void setMemImage( MultipartFile memImage ) throws IOException {
-		
-		if( memImage == null || memImage.isEmpty() ) return; // 이미지가 비어있을 경우
-		
+	private byte[] memImg;
+	private MultipartFile memImage;
+	public void setMemImage(MultipartFile memImage) throws IOException {
+		if(memImage==null || memImage.isEmpty()) return;
 		this.memImage = memImage;
 		this.memImg = memImage.getBytes();
-		
 	}
 	
-	// base64로 인코딩 하기 위한 메소드 ( 64개의 문자로 인코딩 )
 	public String getBase64Img() {
-		if( memImg == null ) {
-			// 변환할게 없을 경우
+		if(memImg==null) {
 			return null;
 		}else {
-			// 변환할게 있을 경우
-			String base64Text = Base64.getEncoder().encodeToString( memImg );
-			log.info( "base64 encoded text : {}", base64Text );
+			String base64Text = Base64.getEncoder().encodeToString(memImg);
+			log.info("base64 encoded text : {}", base64Text);
 			return base64Text;
 		}
 	}
-	
-	public void saveTo( File saveFolder ) throws IOException {
-		if(memImage==null) return;
-		File saveFile = new File( saveFolder, this.memImg.toString() );
-		memImage.transferTo(saveFile);
-	}
-	
-	
 	
 	public String getMemTest() {
 		return "테스트";

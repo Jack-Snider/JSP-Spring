@@ -2,6 +2,9 @@ package kr.or.ddit.member.controller;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.HashMap;
 import java.util.Map;
 
 import javax.servlet.ServletException;
@@ -76,11 +79,10 @@ public class MemberUpdateServlet extends HttpServlet{
 			throw new RuntimeException(e);
 		}
 		
-		if( req instanceof StandardMultipartHttpServletRequest ) {
-			MultipartFile memImage =  ((StandardMultipartHttpServletRequest) req).getFile( "memImage" );
-			member.setMemImage( memImage );
+		if(req instanceof StandardMultipartHttpServletRequest) {
+			MultipartFile memImage = ((StandardMultipartHttpServletRequest) req).getFile("memImage");
+			member.setMemImage(memImage);
 		}
-		
 		
 		Map<String, String> errors = new ValidateUtils<MemberVO>().validate(member, UpdateGroup.class);
 		req.setAttribute("errors", errors);

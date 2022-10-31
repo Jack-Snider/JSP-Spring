@@ -18,6 +18,7 @@ import kr.or.ddit.board.service.BoardService;
 import kr.or.ddit.board.vo.BoardVO;
 import kr.or.ddit.board.vo.PagingVO;
 import kr.or.ddit.board.vo.SearchVO;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * HandlerAdapter 사용 방법(컨트롤러 구현 방법)
@@ -37,11 +38,17 @@ import kr.or.ddit.board.vo.SearchVO;
  *     4) @ResponseBody : 핸들러 메소드의 리턴값으로 response body(message, content) 를 구성할때.
  *     			@RequestMapping(produces, marshalling)    
  */
+@Slf4j
 @Controller
 @RequestMapping("/board")
 public class BoardRetrieveController {
-	@Inject
 	private BoardService service;
+	
+	@Inject
+	public void setService(BoardService service) {
+		this.service = service;
+		log.info(" 주입된 business logic : {}", service.getClass().getName());
+	}
 	
 	@RequestMapping(value="boardList.do", method=RequestMethod.GET)
 	public String listUI() {

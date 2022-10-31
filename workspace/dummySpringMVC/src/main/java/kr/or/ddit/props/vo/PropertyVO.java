@@ -2,13 +2,17 @@ package kr.or.ddit.props.vo;
 
 import java.io.Serializable;
 
+import javax.validation.constraints.NotBlank;
+
 /**
  * Property 한쌍의 정보를 관리하기 위한 Domain Layer
  *
  */
 public class PropertyVO implements Serializable{
 	
+	@NotBlank
 	private String propertyName;
+	@NotBlank
 	private String propertyValue;
 	
 	private String description;

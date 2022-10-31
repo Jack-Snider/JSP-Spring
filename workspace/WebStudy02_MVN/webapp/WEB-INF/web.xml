@@ -9,7 +9,6 @@
 	<listener>
 		<listener-class>org.apache.tiles.web.startup.simple.SimpleTilesListener</listener-class>
 	</listener>
-	
 	<filter>
 		<filter-name>CharacterEncodingFilter</filter-name>
 		<filter-class>kr.or.ddit.filter.CharacterEncodingFilter</filter-class>
@@ -33,7 +32,6 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 
-
 	<filter>
 		<filter-name>MultipartFilter</filter-name>
 		<filter-class>kr.or.ddit.file.filter.MultipartFilter</filter-class>
@@ -42,7 +40,6 @@
 		<filter-name>MultipartFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-
 
 	<servlet>
 		<servlet-name>Tiles Dispatch Servlet</servlet-name>
