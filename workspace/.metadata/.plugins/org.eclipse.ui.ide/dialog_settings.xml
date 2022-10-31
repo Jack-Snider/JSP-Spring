@@ -16,19 +16,22 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy04_SpringBoard"/>
-			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\SpringIoCLab"/>
-			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy03_MVC"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\MeetingStatus"/>
 			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyCharset"/>
-			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyMVN"/>
 			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyStandalone"/>
-			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyWeb"/>
-			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyWebMVN"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummySpringMVC"/>
 			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\LanguageLab"/>
-			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\Servers"/>
-			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy_homework"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\SpringIoCLab"/>
 			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy01"/>
 			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy02_MVN"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy03_MVC"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy04_SpringBoard"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy05_SpringMVC"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyMVN"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyWeb"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\dummyWebMVN"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\Servers"/>
+			<item value="D:\A_TeachingMaterial\6.JspSpring\JSP-Spring\workspace\WebStudy_homework"/>
 			<item value="C:\Users\PC-04\Desktop\WebStudy02_MVN"/>
 			<item value="C:\Users\PC-04\Desktop\WebStudy01"/>
 			<item value="\\DESKTOP-963G6R1\A_TeachingMaterial\6.JspSpring\workspace\WebStudy01"/>
@@ -46,15 +49,15 @@
 	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
 		<item value="false" key="FilterByLocation"/>
 		<item value="true" key="ShowStatusLine"/>
-		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/includee/leftMenu.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/java/kr/or/ddit/board/vo/SearchVO.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Servers/Tomcat v8.5 Server at localhost-config/server.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Servers/Tomcat v8.5 Server at localhost-config/web.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/WEB-INF/jsp/etc/calculateForm.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/WEB-INF/jsp/etc/result.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/java/kr/or/ddit/board/controller/BoardRetrieveController.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/includee/headerMenu.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/WEB-INF/jsp/board/boardList.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/WEB-INF/tiles.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/WEB-INF/tiles/chy-tiles.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/src/main/resources/kr/or/ddit/msgs/message_ko.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/resources/kr/or/ddit/msgs/errorMessage_ko.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/resources/kr/or/ddit/msgs/message_ko.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/WEB-INF/jsp/board/boardEdit.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/java/kr/or/ddit/board/controller/BoardInsertController.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/java/kr/or/ddit/board/controller/BoardUpdateController.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/includee/preScript.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/WEB-INF/jsp/board/boardForm.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/resources/kr/or/ddit/mybatis/mappers/Board.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/java/kr/or/ddit/board/service/BoardService.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/java/kr/or/ddit/board/service/BoardServiceImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/java/kr/or/ddit/board/dao/BoardDAO.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/java/kr/or/ddit/board/vo/BoardVO.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/java/kr/or/ddit/board/controller/BoardDeleteController.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/WEB-INF/web.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy04_SpringBoard/src/main/webapp/WEB-INF/jsp/board/boardView.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy02_MVN/webapp/WEB-INF/web.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Servers/Tomcat v8.5 Server at localhost-config/server.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy05_SpringMVC/webapp/WEB-INF/views/index.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy05_SpringMVC/src/main/java/kr/or/ddit/advice/LoggingAdvice.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy05_SpringMVC/webapp/WEB-INF/spring/appServlet/servlet-context.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/Servers/Tomcat v8.5 Server at localhost-config/web.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy05_SpringMVC/webapp/includee/headerMenu.jsp&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy05_SpringMVC/src/main/java/kr/or/ddit/login/controller/LogoutController.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy05_SpringMVC/src/main/resources/kr/or/ddit/msgs/message_ko.properties&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SpringIoCLab/src/test/java/kr/or/ddit/security/PasswordEncoderTest.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy05_SpringMVC/src/main/java/kr/or/ddit/login/service/AuthentiationServiceImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy05_SpringMVC/src/main/java/kr/or/ddit/member/service/MemberServiceImpl.java&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy05_SpringMVC/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/WebStudy05_SpringMVC/webapp/WEB-INF/web.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;infoNode path=&quot;/SpringIoCLab/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0D;&#x0A;&lt;/historyRootNode&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
 		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
 		<item value="false" key="ShowDerived"/>
 		<section name="DialogBoundsSettings">
 			<item value="600" key="DIALOG_WIDTH"/>
 			<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 			<item value="500" key="DIALOG_HEIGHT"/>
-			<item value="366" key="DIALOG_X_ORIGIN"/>
-			<item value="411" key="DIALOG_Y_ORIGIN"/>
+			<item value="367" key="DIALOG_X_ORIGIN"/>
+			<item value="346" key="DIALOG_Y_ORIGIN"/>
 		</section>
 	</section>
 </section>

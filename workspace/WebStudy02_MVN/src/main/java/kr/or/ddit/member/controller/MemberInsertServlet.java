@@ -65,13 +65,10 @@ public class MemberInsertServlet extends HttpServlet{
 			throw new RuntimeException(e);
 		}
 		
-		// 이미지 처리
 		if(req instanceof StandardMultipartHttpServletRequest) {
-			MultipartFile prodImage = ((StandardMultipartHttpServletRequest) req).getFile( "memImage" );
-			member.setMemImage( prodImage );
-
+			MultipartFile memImage = ((StandardMultipartHttpServletRequest) req).getFile("memImage");
+			member.setMemImage(memImage);
 		}
-		
 		
 		Map<String, String> errors =  new ValidateUtils<MemberVO>().validate(member, InsertGroup.class);
 		req.setAttribute("errors", errors);

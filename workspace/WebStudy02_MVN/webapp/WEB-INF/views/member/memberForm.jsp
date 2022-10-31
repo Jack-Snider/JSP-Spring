@@ -28,17 +28,12 @@
 				<span class="error">${errors['memName'] }</span>
 			</td>
 		</tr>
-		
-		
 		<tr>
 			<th>회원이미지</th>
 			<td>
-				<input type = "file" name ="memImage" accept="image/*" />
+				<input type="file" name="memImage" accept="image/*" />
 			</td>
 		</tr>
-		
-		
-		
 		<tr>
 			<th>주민번호1</th>
 			<td>
@@ -47,11 +42,6 @@
 				<span class="error">${errors['memRegno1'] }</span>
 			</td>
 		</tr>
-		
-		
-		
-		
-		
 		<tr>
 			<th>주민번호2</th>
 			<td>

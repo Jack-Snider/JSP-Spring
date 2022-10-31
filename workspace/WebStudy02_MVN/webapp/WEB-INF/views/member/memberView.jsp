@@ -18,15 +18,13 @@
 		<th>MEM_REGNO1</th>
 		<td>${member['memRegno1'] }</td>
 	</tr>
-	
 	<tr>
 		<th>회원이미지</th>
-		<td>
-			<!-- 2진 데이터를 문자열로 바꾸는 방법 -->
-			<img src="data:image/*;base64,${member.base64Img }">
+		<td>	
+			<img src="data:image/*;base64,${member.base64Img }"/>
+			
 		</td>
 	</tr>
-	
 	<tr>
 		<th>MEM_REGNO2</th>
 		<td>${member['memRegno2'] }</td>

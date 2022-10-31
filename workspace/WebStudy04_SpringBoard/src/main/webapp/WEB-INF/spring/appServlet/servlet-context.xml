@@ -47,6 +47,11 @@
 		p:order="1"
 	/>
 	
+	<bean id="downloadView" class="kr.or.ddit.board.view.DownloadView" />
+	<bean class="org.springframework.web.servlet.view.BeanNameViewResolver" 
+		p:order="2"
+	/>
+	
 	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 	
 	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource" 

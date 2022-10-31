@@ -1,11 +1,7 @@
 package kr.or.ddit.vo;
 
-import java.io.File;
 import java.io.Serializable;
 import java.util.Arrays;
-import java.util.Date;
-
-import javax.servlet.http.Part;
 
 /**
  *  ValueObject, DataTransferObject, JavaBean, Model
